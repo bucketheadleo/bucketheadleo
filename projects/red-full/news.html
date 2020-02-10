@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>News - Red Edition</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div id="loading"></div>
+    
+    <header id="header">
+       <nav class="nav">
+
+           <span class="nav-logo">
+               <a class="ch-color" href="index.html">red</a>
+           </span>
+
+           <div class="navbar-nav">
+               
+                <ul class="main-nav">
+                    <li class="nav-link underlined">
+                        <a class="ch-color" onclick="showCollection(event)" href="#">Collections</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="ch-color" href="apartment.html">Red Edition Apartment</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="ch-color" href="professionals.html">Professionals</a>
+                    </li>
+                    <li class="nav-link  underlined">
+                        <a class="active ch-color" href="news.html">News</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="ch-color" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="toggleSearchPanel(event)">
+                            <img class="search-svg ch-src" src="pictures/nav-svgs/search.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+           </div>
+
+           <div class="navbar-nav-right">
+             <ul>
+                <li class="nav-link" id="account-link">
+                    <a href="#"  class="ch-color"  >My account</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <img   class="heart-svg ch-src" src="pictures/nav-svgs/heart.svg" alt="">
+                    </a>
+                </li>
+                <li class="nav-link shop-hover">
+                    <a href="#"> 
+                        <img class="shop-svg ch-src" src="pictures/nav-svgs/shop.svg" alt="">
+                        <span>No products in the cart.</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <select  class="ch-color">
+                        <option value="en">en</option>
+                        <option value="geo">geo</option>
+                    </select>
+                </li>
+                <li class="nav-link manu">
+                    <a href="#" onclick="showMenuAside(event)">
+                        <img class="menu-svg ch-src" src="pictures/nav-svgs/menu.svg" alt="">
+                    </a>
+                </li>
+             </ul>
+           </div>
+
+           <div class="navbar-nav-aside">
+                <span class="close-nav-aside" onclick="hideMenuAside()" >&#10005;</span>
+
+                <div class="nav-aside-scrollable">
+                    <ul class="nav-header">
+                        <li class="nav-link">
+                            <a href="#">My account</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img   class="heart-svg" src="pictures/nav-svgs/heart-blc.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="toggleSearchPanel(event)">
+                                <img class="search-svg" src="pictures/nav-svgs/search-blc.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+        
+                    <ul class="main-nav">
+                        <li class="nav-link">
+                            <a onclick="showCollection(event)" href="#">Collections</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="apartment.html">Red Edition Apartment</a>
+                        </li>
+                        <li class="nav-link ">
+                            <a href="#">Professionals</a>
+                        </li>
+                        <li class="nav-link  ">
+                            <a class="active" href="news.html">News</a>
+                        </li>
+                        <li class="nav-link ">
+                            <a href="about.html">About us</a>
+                        </li>
+                    </ul>
+        
+                    <div class="nav-footer">
+                        <ul class="footer-container">
+                            <li class="footer-item">
+                                <h3>Help</h3>
+                                <ul>
+                                    <li><a href="#">Write us</a></li>
+                                    <li><a href="#">Terms of sale</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Shipping</a></li>
+                                    <li><a href="#">My account</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer-item">
+                                <h3>About</h3>
+                                <ul>
+                                    <li><a href="#">The Brand</a></li>
+                                    <li><a href="#">Designer</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer-item">
+                                <h3>Adress</h3>
+                                <ul>
+                                    <li><a href="#">Store locator</a></li>
+                                    <li><a href="#">Store</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
+
+           <aside class="collection-panel">
+               <div class="wrapper">
+
+                   <span class="close-collection" onclick="hideCollection(event)" >&#10005;</span>
+
+                   <div class="content" id="scrollable">
+
+                        <div class="collention-header">
+                            <span>Collections</span>
+                            <a href="#" onclick="hideCollection(event)" >All our products</a>
+                        </div>
+
+                        <ul class="collection-list">
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Sideboards</span>
+                                    <a href="#">Mirror sideboard</a>
+                                </span>  
+                                <img src="pictures/collection/item-2.jpg" alt="">
+                            </li>
+                            
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Living room table</span>
+                                    <a href="#">table Large Tea table</a>
+                                </span>  
+                                <img src="pictures/collection/item-4.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Coffee tables</span>
+                                    <a href="#">Lounge coffee table <br> Large coffee table <br> Small 50’s coffee table</a>
+                                </span>  
+                                <img src="pictures/collection/item-5.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Large Curved Sofa</span>
+                                    <a href="#">210Sofa 210Cane Sofa 160Sofa 120 </a>
+                                </span>  
+                                <img src="pictures/collection/item-1.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Accessories</span>
+                                    <a href="#">Pigalle Box</a>
+                                </span>  
+                                <img src="pictures/collection/item.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Sideboards</span>
+                                    <a href="#">Mirror sideboard</a>
+                                </span> 
+                                <img src="pictures/collection/item-2.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Living room table</span>
+                                    <a href="#">table Large Tea table</a>
+                                </span>  
+                                <img src="pictures/collection/item-4.jpg" alt="">
+                            </li>
+                        
+                        </ul>
+                   </div>
+
+               </div>
+           </aside>
+
+       </nav>
+
+       <form class="header-search " action="">
+            <div class="wrapper">
+                <span class="close-btn">&#10005;</span>
+                <label for="">
+                    <span class="search-bg">S</span>
+                    <span class="search-bg">e</span>
+                    <span class="search-bg">a</span>
+                    <span class="search-bg">r</span>
+                    <span class="search-bg">c</span>
+                    <span class="search-bg">h</span>
+                </label>
+
+                <input class="search-input" type="text" autofocus >
+                <span  class="search-underline">Search</span>
+                <span class="not-found">No results for this search</span>
+            </div>
+        </form>
+
+        <form action="" class="account">
+            <div class="wrapper">
+                <input type="text" placeholder=" Email address  ">
+                <input type="text" placeholder=" Password  ">
+
+                <div class="remember-me">
+                    <input type="checkbox"></input>
+                    <span>Remember me</span>
+                </div>
+                <a href="" class="forgot-pass"> Forgot your password?</a>
+
+                <button>Login</button>
+
+                <a href="#" class="no-acc">I do not have an account yet</a>
+            </div>
+        </form>
+
+    </header>
+
+    <!--  section 1  hero  -->
+    <section id="magazine-hero">
+        <div class="container">
+
+            <h1>News</h1>
+
+            <div class="slider-wrapper">
+
+                <button id="prevbtn"> &lt;</button>
+                <button id="nextbtn"> &gt;</button>
+                
+                <span class="slide-index-box">
+                    <span class="slide-index on"></span>
+                    <span class="slide-index"></span>
+                    <span class="slide-index"></span>
+                </span>
+
+                <div class="carousel-slider">
+
+                    <figure>
+                        <img src="pictures/news/slider-2.jpg" alt="">
+                        <figcaption>
+                            <span class="slide-text">
+                                <div class="text">
+                                    <span>Mirror trends</span>
+                                </div>
+                            </span>
+                            
+                            <div class="underlined">
+                                <a href="">Discover</a>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="pictures/news/slider-1.jpg" alt="">
+                        <figcaption>
+                            <span class="slide-text">
+                                <div class="text">
+                                    <span>Create the cane sofa of</span>  <br>
+                                    <span>your dreams...</span>
+                                </div>
+                            </span>
+                            
+                            <div class="underlined">
+                                <a href="">Discover</a>
+                            </div>
+                        </figcaption>  
+                    </figure>
+
+                    <figure>
+                        <img src="pictures/news/slider-3.jpg" alt="">
+                        <figcaption>
+                            <span class="slide-text">
+                                <div class="text">
+                                    <span>Cane Inspires our creations !</span>
+                                </div>
+                            </span>
+                            
+                            <div class="underlined">
+                                <a href="">Discover</a>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="pictures/news/slider-2.jpg" alt="">
+                        <figcaption>
+                            <span class="slide-text">
+                                <div class="text">
+                                        <span>Mirror trends</span>
+                                </div>
+                            </span>
+                            
+                            <div class="underlined">
+                                <a href="">Discover</a>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="pictures/news/slider-1.jpg" alt="">
+                        <figcaption>
+                            <span class="slide-text">
+                                <div class="text">
+                                    <span>Create the cane sofa of</span>  <br>
+                                    <span>your dreams...</span>
+                                </div>
+                            </span>
+                            
+                            <div class="underlined">
+                                <a href="">Discover</a>
+                            </div>
+                        </figcaption>  
+                    </figure>
+
+                    <figure>
+                        <img src="pictures/news/slider-3.jpg" alt="">
+                        <figcaption>
+                            <span class="slide-text">
+                                <div class="text">
+                                    <span>Cane Inspires our creations !</span>
+                                </div>
+                            </span>
+                            
+                            <div class="underlined">
+                                <a href="">Discover</a>
+                            </div>
+                        </figcaption>
+                    </figure>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--  section 2  products  -->
+    <section id="items">
+       <div class="container">
+           <div class="item-wrapper">
+
+                <a href="#" class="item"> 
+                    <figure >
+                        <img src="pictures/news/item-1.jpg" alt="">
+                        <figcaption>
+                            <h2>
+                                Create the cane sofa of your dreams...
+                            </h2>
+                        </figcaption>
+                    </figure>
+                </a>
+
+               <a href="#" class="item">
+                    <figure>
+                        <img src="pictures/news/item-2.jpg" alt="">
+                        <figcaption>
+                            <h2>
+                                Cane inspires our creations!
+                            </h2>
+                        </figcaption>
+                    </figure>
+               </a>
+
+               <a href="#" class="item">
+                    <figure>
+                        <img src="pictures/news/item-2.jpg" alt="">
+                        <figcaption>
+                            <h2>
+                                Mirror trends
+                            </h2>
+                        </figcaption>
+                    </figure>
+               </a>
+
+           </div>
+       </div>
+    </section>
+
+    <!--  section 3 our creations  -->
+    <section id="our-creations">
+        <div class="content">
+            <div class="left">
+                <img src="pictures/news/item-2.jpg" alt="">
+            </div>
+            <div class="right">
+                <h2>Cane inspires<br>our creations!</h2>
+                <p>Canning is making a comeback in the design world!</p>
+
+                <p>Caning is a weaving technique using rattan, a plant known for its flexibility and remarkable strength. We mostly use rattan in its natural form, or “rotang” as it’s called in the Philippines. It is treated and cut in reeds and woven in different motifs.</p>
+
+                <p>Did you know? At the end of the 17th century, the English and Dutch started importing rattan from Asia where they had their merchant centers. Combining comfort and durability, caning was an exotic material met with success in France from La Régence (1715-1723) until Louis XV. It found its way to sofas, armchairs, and headboard through to modernity, notably in the beginning of the 20th century. In 1859, Michael Thonet created the cane chair n°14 christened as THE Bistrot Chair. It was heralded as an iconic piece of industrial design. What followed was a series of other mythical designs also born out of cane such as the Cesca B32 from Marcel Breuer (1928) or even the Rio de Charlotte Perriand (1962) table.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- - footer  main  -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+    
+                    <div class="col">
+                        <a href="#">Secure payment</a>
+                        <p>Visa, American Express, Mastercard and 3x free</p>
+                    </div>
+                    <div class="col">
+                        <a href="#">Delivery</a>
+                        <p>Home Delivery on Your Schedule</p>
+                    </div>
+                    <div class="col">
+                        <a href="#">Customer service</a>
+                        <p>9.30am-6.30pm Monday to Friday</p>
+                        <a href="#">+33 (0) 1 43 37 02 87 / info@rededition.com</a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="container">
+
+               <div class="footer-item">
+                    <h2>Help</h2>
+                    <span>Write us</span> <br>
+                    <a href="#" >info@rededition.com</a>
+                       
+                    <ul>
+                        <li>
+                            <a href="#">Terms of sale</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">Shipping</a>
+                        </li>
+                        <li>
+                            <a href="#">My account</a>
+                        </li>
+                    </ul>
+               </div>
+
+               <div class="footer-item">
+                   <h2>About</h2>
+                   <ul>
+                        <li>
+                            <a href="#">The Brand</a>
+                        </li>
+                        <li>
+                            <a href="#"> Designer</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                   <h2>Adress</h2>
+                   <ul>
+                        <li>
+                            <a href="#">Store locator</a>
+                        </li>
+                        <li>
+                            <a href="#">Login to the reseller area</a>
+                        </li>
+                    </ul>
+               </div>
+
+               <div class="footer-item">
+                   <h2>Follow us</h2>
+                   <form action="">
+                       <h2>Newsletter</h2>
+
+                       <div class="input-block">
+                            <input type="text" placeholder="Email address">
+                            <button>	&gt; </button>
+                       </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    
+    <script src="scripts/general.js"></script>
+    <script src="scripts/news.js"></script>
+</body>
+</html>

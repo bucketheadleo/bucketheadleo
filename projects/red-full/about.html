@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About us - Red Edition</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+     
+    <div id="loading"></div>
+    
+    <header id="header">
+       <nav class="nav">
+
+           <span class="nav-logo">
+               <a class="ch-color" href="index.html">red</a>
+           </span>
+
+           <div class="navbar-nav">
+               
+                <ul class="main-nav">
+                    <li class="nav-link underlined">
+                        <a class="ch-color" onclick="showCollection(event)" href="#">Collections</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="ch-color" href="apartment.html">Red Edition Apartment</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="ch-color" href="professionals.html">Professionals</a>
+                    </li>
+                    <li class="nav-link  underlined">
+                        <a class="ch-color" href="news.html">News</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="active ch-color" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="toggleSearchPanel(event)">
+                            <img class="search-svg ch-src" src="pictures/nav-svgs/search.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+           </div>
+
+           <div class="navbar-nav-right">
+             <ul>
+                <li class="nav-link" id="account-link">
+                    <a href="#"  class="ch-color"  >My account</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <img   class="heart-svg ch-src" src="pictures/nav-svgs/heart.svg" alt="">
+                    </a>
+                </li>
+                <li class="nav-link shop-hover">
+                    <a href="#"> 
+                        <img class="shop-svg ch-src" src="pictures/nav-svgs/shop.svg" alt="">
+                        <span>No products in the cart.</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <select  class="ch-color">
+                        <option value="en">en</option>
+                        <option value="geo">geo</option>
+                    </select>
+                </li>
+                <li class="nav-link manu">
+                    <a href="#" onclick="showMenuAside(event)">
+                        <img class="menu-svg ch-src" src="pictures/nav-svgs/menu.svg" alt="">
+                    </a>
+                </li>
+             </ul>
+           </div>
+
+           <div class="navbar-nav-aside">
+                <span class="close-nav-aside" onclick="hideMenuAside()" >&#10005;</span>
+
+                <div class="nav-aside-scrollable">
+                    <ul class="nav-header">
+                        <li class="nav-link">
+                            <a href="#">My account</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img   class="heart-svg" src="pictures/nav-svgs/heart-blc.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="toggleSearchPanel(event)">
+                                <img class="search-svg" src="pictures/nav-svgs/search-blc.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+        
+                    <ul class="main-nav">
+                        <li class="nav-link">
+                            <a onclick="showCollection(event)" href="#">Collections</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="apartment.html">Red Edition Apartment</a>
+                        </li>
+                        <li class="nav-link ">
+                            <a href="#">Professionals</a>
+                        </li>
+                        <li class="nav-link  ">
+                            <a href="news.html">News</a>
+                        </li>
+                        <li class="nav-link ">
+                            <a class="active" href="about.html">About us</a>
+                        </li>
+                    </ul>
+        
+                    <div class="nav-footer">
+                        <ul class="footer-container">
+                            <li class="footer-item">
+                                <h3>Help</h3>
+                                <ul>
+                                    <li><a href="#">Write us</a></li>
+                                    <li><a href="#">Terms of sale</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Shipping</a></li>
+                                    <li><a href="#">My account</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer-item">
+                                <h3>About</h3>
+                                <ul>
+                                    <li><a href="#">The Brand</a></li>
+                                    <li><a href="#">Designer</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer-item">
+                                <h3>Adress</h3>
+                                <ul>
+                                    <li><a href="#">Store locator</a></li>
+                                    <li><a href="#">Store</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
+
+           <aside class="collection-panel">
+               <div class="wrapper">
+
+                   <span class="close-collection" onclick="hideCollection(event)" >&#10005;</span>
+
+                   <div class="content" id="scrollable">
+
+                        <div class="collention-header">
+                            <span>Collections</span>
+                            <a href="#" onclick="hideCollection(event)" >All our products</a>
+                        </div>
+
+                        <ul class="collection-list">
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Sideboards</span>
+                                    <a href="#">Mirror sideboard</a>
+                                </span>  
+                                <img src="pictures/collection/item-2.jpg" alt="">
+                            </li>
+                            
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Living room table</span>
+                                    <a href="#">table Large Tea table</a>
+                                </span>  
+                                <img src="pictures/collection/item-4.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Coffee tables</span>
+                                    <a href="#">Lounge coffee table <br> Large coffee table <br> Small 50’s coffee table</a>
+                                </span>  
+                                <img src="pictures/collection/item-5.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Large Curved Sofa</span>
+                                    <a href="#">210Sofa 210Cane Sofa 160Sofa 120 </a>
+                                </span>  
+                                <img src="pictures/collection/item-1.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Accessories</span>
+                                    <a href="#">Pigalle Box</a>
+                                </span>  
+                                <img src="pictures/collection/item.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Sideboards</span>
+                                    <a href="#">Mirror sideboard</a>
+                                </span> 
+                                <img src="pictures/collection/item-2.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Living room table</span>
+                                    <a href="#">table Large Tea table</a>
+                                </span>  
+                                <img src="pictures/collection/item-4.jpg" alt="">
+                            </li>
+                        
+                        </ul>
+                   </div>
+
+               </div>
+           </aside>
+
+       </nav>
+
+       <form class="header-search " action="">
+            <div class="wrapper">
+                <span class="close-btn">&#10005;</span>
+                <label for="">
+                    <span class="search-bg">S</span>
+                    <span class="search-bg">e</span>
+                    <span class="search-bg">a</span>
+                    <span class="search-bg">r</span>
+                    <span class="search-bg">c</span>
+                    <span class="search-bg">h</span>
+                </label>
+
+                <input class="search-input" type="text" autofocus >
+                <span  class="search-underline">Search</span>
+                <span class="not-found">No results for this search</span>
+            </div>
+        </form>
+
+        <form action="" class="account">
+            <div class="wrapper">
+                <input type="text" placeholder=" Email address  ">
+                <input type="text" placeholder=" Password  ">
+
+                <div class="remember-me">
+                    <input type="checkbox"></input>
+                    <span>Remember me</span>
+                </div>
+                <a href="" class="forgot-pass"> Forgot your password?</a>
+
+                <button>Login</button>
+
+                <a href="#" class="no-acc">I do not have an account yet</a>
+            </div>
+        </form>
+
+    </header>
+    
+    <!-- article - about  -->
+    <article id="article">
+
+        <header class="aboutus-hero">
+           <img id="hero" src="pictures/aboutUs/hero.jpg" alt="">
+        </header>
+
+        <section class="img-text">
+            <div class="wrapper">
+                <div class="left">
+                    <img src="pictures/aboutUs/person.jpg" alt="">    
+                </div>  
+                <div class="right">
+                    <h5>Founder</h5>
+                    <h2>Cyril Laborbe</h2>
+
+                    <p>
+                         I love the time we live in: the immediacy of digital technology, the simplicity in connecting with others and the easy access we have to other cultures… it has always been my intention to focus on these aspects in creating and developing Red Edition. Our furniture is designed in Paris, manufactured in Saigon, approved in Copenhagen and sold in Hong Kong and it delights me!
+                        
+                    </p>
+
+                    <p>
+                        I love design and artisanship, I am moved by the nobility of craftsmanship and manual labor. I have always been attracted to Vietnam and its incredibly broad range of talents.Since 2006, when I founded Red Edition, I have been passionate about creating simple, beautiful, colorful, furniture designs. I get to work as I love to: surrounded, supported, motivated and inspired by friends, great designers, and talented people of all kinds… this is what makes the uniqueness and the richness of Red Edition.  <br>
+                        I love trends but I also think about what is practical, I think about how our furniture will fit in your interiors, I am constantly looking to understand what you want, and to grow community: always remember that Red Edition is your brand.
+                    </p>
+                </div> 
+            </div>
+        </section>
+
+        <section class="press">
+
+            <div class="container">
+
+                <h2>Press</h2>
+            
+                <div class="magazines">
+                    <figure>
+                        <img src="pictures/aboutUs/magazine-1.jpg" alt="">
+                    </figure>
+
+                    <figure>
+                        <img src="pictures/aboutUs/magazine-2.jpg" alt="">
+                    </figure>
+
+                    <figure>
+                        <img src="pictures/aboutUs/magazine-3.jpg" alt="">
+                    </figure>
+                </div>
+                <div class="links">
+                    <a href="#">Press kit</a>
+                    <span> | </span>
+                    <a href="#">Book press</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="people">
+            <div class="container">
+
+                <h5>Our parternships</h5>
+
+                <h2 class="accordion-h2" >Madura & Red Edition <span></span></h2>
+
+                <div class="accordion-item active">
+                   <div class="content">
+                       <p>
+                        Madura and RED Edition combine for the first time, to offer us an exclusive and very contemporary collection.
+                       </p>
+                       <p>
+                        Together the two houses imagine a variation of cushions, and a line of fabric to dress the Fifties 210, sofa but also the Love Seat and Floating chairs, iconic foundations of neo RED Edition vintage furniture brand. <br>
+                        Cotton and linen canvases come in intense colors and timeless: black coal Fifties dress the sofa 210, terracotta and blue glacier Floating chairs. An elegant two-tone blue and ecru revisits the Love seat weaving. Three rectangular cushions adorn this collection and marry perfectly with the delicate fabric created by Madura and RED Edition. <br>
+                        True to the spirit of RED Edition, this capsule collection is a nod to Vietnam, their parts Country design. <br>
+                        True variation on the theme "living botany", the pieces from the Madura Online <br>
+                        RED invite us to a journey between Paris and Hanoi. <br>
+                       </p>
+                   </div>
+                </div>
+
+                <h2 class="accordion-h2" >Red Edition I Sonos</h2>
+
+                <div class="accordion-item">
+                   <div class="content">
+                       <p>
+                            Working in partnership at La Maison Sonos in Paris for over a year now, Red Edition and Sonos have continued to push the boundaries of their collaboration by working together on their first TV console.  <br>
+                       </p>
+                       <p>
+                        Together the two houses imagine a variation of cushions, and a line of fabric to dress the Fifties 210, sofa but also the Love Seat and Floating chairs, iconic foundations of neo RED Edition vintage furniture brand. <br>
+                        Cotton and linen canvases come in intense colors and timeless: black coal Fifties dress the sofa 210, terracotta and blue glacier Floating chairs. An elegant two-tone blue and ecru revisits the Love seat weaving. Three rectangular cushions adorn this collection and marry perfectly with the delicate fabric created by Madura and RED Edition. <br>
+                        True to the spirit of RED Edition, this capsule collection is a nod to Vietnam, their parts Country design. <br>
+                        True variation on the theme "living botany", the pieces from the Madura Online <br>
+                        RED invite us to a journey between Paris and Hanoi. <br>
+                       </p>
+                   </div>
+                </div>
+
+                <h5>Our designers</h5>
+
+                <h2 class="accordion-h2" >David Hodkinson</h2>
+
+                <div class="accordion-item">
+                   <div class="content">
+                       <p>
+                            David is a focused, passionate architect and designer who brings a fresh, young eye to each project.
+                       </p>
+                       <p>
+                        Together the two houses imagine a variation of cushions, and a line of fabric to dress the Fifties 210, sofa but also the Love Seat and Floating chairs, iconic foundations of neo RED Edition vintage furniture brand. <br>
+                        Cotton and linen canvases come in intense colors and timeless: black coal Fifties dress the sofa 210, terracotta and blue glacier Floating chairs. An elegant two-tone blue and ecru revisits the Love seat weaving. Three rectangular cushions adorn this collection and marry perfectly with the delicate fabric created by Madura and RED Edition. <br>
+                        True to the spirit of RED Edition, this capsule collection is a nod to Vietnam, their parts Country design. <br>
+                        True variation on the theme "living botany", the pieces from the Madura Online <br>
+                        RED invite us to a journey between Paris and Hanoi. <br>
+                       </p>
+                   </div>
+                </div>
+
+                <h2 class="accordion-h2" >Sabrina Ficarra</h2>
+
+                <div class="accordion-item">
+                   <div class="content">
+                       <p>
+                            Sabrina Ficarra is a stylist and designer. She draws her inspiration from her travels and fashion.
+                       </p>
+                       <p>
+                        Together the two houses imagine a variation of cushions, and a line of fabric to dress the Fifties 210, sofa but also the Love Seat and Floating chairs, iconic foundations of neo RED Edition vintage furniture brand. <br>
+                        Cotton and linen canvases come in intense colors and timeless: black coal Fifties dress the sofa 210, terracotta and blue glacier Floating chairs. An elegant two-tone blue and ecru revisits the Love seat weaving. Three rectangular cushions adorn this collection and marry perfectly with the delicate fabric created by Madura and RED Edition. <br>
+                        True to the spirit of RED Edition, this capsule collection is a nod to Vietnam, their parts Country design. <br>
+                        True variation on the theme "living botany", the pieces from the Madura Online <br>
+                        RED invite us to a journey between Paris and Hanoi. <br>
+                       </p>
+                   </div>
+                </div>
+                
+
+            </div>
+        </section>
+
+    </article>
+
+    <!-- - footer  main  -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+    
+                    <div class="col">
+                        <a href="#">Secure payment</a>
+                        <p>Visa, American Express, Mastercard and 3x free</p>
+                    </div>
+                    <div class="col">
+                        <a href="#">Delivery</a>
+                        <p>Home Delivery on Your Schedule</p>
+                    </div>
+                    <div class="col">
+                        <a href="#">Customer service</a>
+                        <p>9.30am-6.30pm Monday to Friday</p>
+                        <a href="#">+33 (0) 1 43 37 02 87 / info@rededition.com</a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="container">
+
+               <div class="footer-item">
+                    <h2>Help</h2>
+                    <span>Write us</span> <br>
+                    <a href="#" >info@rededition.com</a>
+                       
+                    <ul>
+                        <li>
+                            <a href="#">Terms of sale</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">Shipping</a>
+                        </li>
+                        <li>
+                            <a href="#">My account</a>
+                        </li>
+                    </ul>
+               </div>
+
+               <div class="footer-item">
+                   <h2>About</h2>
+                   <ul>
+                        <li>
+                            <a href="#">The Brand</a>
+                        </li>
+                        <li>
+                            <a href="#"> Designer</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                   <h2>Adress</h2>
+                   <ul>
+                        <li>
+                            <a href="#">Store locator</a>
+                        </li>
+                        <li>
+                            <a href="#">Login to the reseller area</a>
+                        </li>
+                    </ul>
+               </div>
+
+               <div class="footer-item">
+                   <h2>Follow us</h2>
+                   <form action="">
+                       <h2>Newsletter</h2>
+
+                       <div class="input-block">
+                            <input type="text" placeholder="Email address">
+                            <button>	&gt; </button>
+                       </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    
+    <script src="scripts/general.js"></script>
+    <script src="scripts/about.js"></script>
+
+    
+</body>
+</html>

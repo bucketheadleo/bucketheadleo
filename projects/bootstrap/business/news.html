@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>who we are</title>
+    <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+
+<header id="site-header">
+    <!-- top info bar -->
+    <div class="top-bar-info">
+        <div class="container">
+            <div class="top-bar-wrap">
+                <div class="top-content-left">
+                    <a href="#" class="top-content-block">
+                        <i class="fa fa-phone fa-lg"> </i>
+                        <span>  +800 123 45 67</span>
+                    </a>
+                    <a href="#" class="top-content-block">
+                        <i class="fa fa-envelope fa-lg"> </i>
+                        <span> INFO@COMPANY.COM</span>
+                    </a>
+                    <div class="top-content-block">
+                        <i class="fa fa-map-marker fa-lg"> </i>
+                        <span>121 SOMETHING STREET, CITY </span>
+                    </div>
+                </div>
+                <div class="top-content-right">
+                    <div class="sign">
+                        <a href="#" onclick="openModal(0, event)">LOGIN</a> 
+                        <span>|</span>
+                        <a href="#" onclick="openModal(1, event)">SIGN UP</a>
+                    </div> 
+                    <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                    <a href="https://twitter.com"  target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="https://linkedin.com"  target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- modals  -->
+    <div id="myModal">
+        <div class="modal-container">
+            <div class="close" onclick="closeModal(0, event)" >+</div> 
+            <img src="img/login.png" alt="">
+            <h2>LOGIN</h2>
+            <form action="">
+                <input type="email" placeholder="E-Mail" autofocus >
+                <input type="password" placeholder="Password">
+    
+                <div class="signup-link">
+                    <span>Don't have an account? Click here to</span>
+                    <a id="signup-shift" href="#" onclick="switchModals(0, 1)">Sign up</a>
+                </div>
+                <div class="rememberMe">
+                    <input type="checkbox" id="fruit1" >
+                    <label for="fruit1">Remember me</label>
+                </div>
+                <a href="#" onclick="closeModal(0, event)" class="subbmit" >LOGIN</a>
+            </form>
+        </div>
+    </div>
+    
+    <div id="myModal-second">
+        <div class="modal-container second-container">
+            <div class="close" onclick="closeModal(1, event)" >+</div>
+            <img src="img/login.png" alt="">
+            <h2>SIGN UP</h2>
+            <form action="">
+                <input type="login" placeholder="Login" autofocus>
+                <input type="email" placeholder="E-Mail" >
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Repeat Password">
+                <div class="signup-link">
+                    <span>Already have an account?    </span>
+                    <a id="login-shift" href="#" onclick="switchModals(1, 0)">login</a>
+                </div>
+                <a href="#" onclick="closeModal(1, event)" class="subbmit" >SIGN UP</a>
+            </form>
+        </div>
+    </div>
+    <!-- navigation -->
+    <nav class="navbar" id="nav-white">
+        <div class="container">
+
+            <div class="site-branding">
+                    <a href="index.html"><img src="https://ld-wp73.template-help.com/imperion/presentation/wp-content/uploads/2019/07/logo.png" alt=""></a>
+            </div>
+    
+            <div class="navbar-menu">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+
+            <ul class="navbar-nav">
+                <li>
+                    <a href="index.html" class="navbar-link">home</a> 
+                </li>
+                <li>
+                    <a href="projects.html" class="navbar-link">projects</a>
+                    <ul class="dropdown">
+                        <h4>projects & stuff</h4>
+                        <li><a href="#"> dropdown item </a></li>
+                        <li><a href="#"> the item  </a></li>
+                        <li><a href="#">dropdown item </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="news.html" class="navbar-link active">news</a>
+                    <ul class="dropdown">
+                        <h4>daily news</h4>
+                        <li><a href="#"> news place</a></li>
+                        <li><a href="#">dropdown item </a></li>
+                        <li><a href="#"> the item  </a></li>
+                        <li><a href="#">dropdown item </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="about.html" class="navbar-link">about us</a>
+                    <ul class="dropdown">
+                        <h4>shopping</h4>
+                        <li><a href="#"> dropdown item </a></li>
+                        <li><a href="#"> the item  </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+ <!--           hero    - -->
+<section id="small-hero">
+    
+    <div class="hero-content">
+        <div class="left"><h2>NEWS</h2></div>
+        <div class="right">
+            <p>Home <span style="padding: 0 4px;">></span>News</p>
+        </div>
+
+    </div>
+</section>
+
+ <!--  news - section 1  --->
+<section id="news">
+    <div class="news-wrapper">
+
+        <div class="posts">
+            <article class="post">
+                <figure>
+                    <img width="840" height="460" src="https://ld-wp73.template-help.com/imperion/presentation/wp-content/uploads/2019/07/post-2-770x460.png">
+                </figure>
+                <div class="post-text">
+                    <div class="post-entry">
+                        <a href="#">July 18,</a>
+                        <a href="#">2019 in Digital,</a> 
+                        <a href="#">Featured Fashion,</a> 
+                        <a href="#">Interview, Organization,</a>
+                        <a href="#">Strategy</a>
+                        <a href="#"><i class="fa fa-comment fa-xs"> </i> 0 ,</a>
+                        <a href="#">by admin</a>
+                    </div>
+                    <h3>Yes studio: from Paris with love.</h3>
+                    <p>When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile. Assuming that you will go the easy way and choose a theme for your WordPress website, the overall number of characteristics that you will need to keep in mind narrows down significantly.</p>
+
+                    <p>All the WordPress themes that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it. With such a wide range of choices at hand, we strongly advise you to stick to the WordPress Theme that is based on your business’ or a closely related field.</p>
+
+                    <h3 class="header-italic"><i class="fa fa-pause"></i> I’m as proud of many of the things we haven’t done as the things we have done.EMMA DOE, COMPANY CEO</h3>
+
+                    <p>When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile. Assuming that you will go the easy way and choose a theme for your WordPress website, the overall number of characteristics that you will need to keep in mind narrows down significantly.</p>
+
+                    <div class="profile">
+                        <img width="85" height="85" src="img/profile.png" alt="">
+                        <h3>admin</h3>
+                    </div>
+                    <div class="comment">
+                        <h3>LEAVE A REPLY</h3>
+                        <h3>Your email address will not be published. Required fields are marked *</h4>
+                        <textarea name="" id=""  rows="10"  placeholder="Your Message * "></textarea>
+                        <div class="input-flex">
+                            <input type="name" placeholder="Your Name *">
+                            <input type="e-mail" placeholder="Your E-mail * ">
+                        </div>
+                        <input type="website" placeholder="Your Website">
+                        <button>LEAVE A REPLY</button>
+                        <a href="news.html"><button>Back To posts</button></a>
+                    </div>
+                </div>
+
+                <div class="read-more">
+                    <button>READ MORE  <i class="fa fa-chevron-right"></i></button>
+                </div>
+
+            </article>
+            
+            <article class="post">
+                <figure>
+                    <img width="840" height="460" src="https://ld-wp73.template-help.com/imperion/presentation/wp-content/uploads/2019/07/post-1-770x460.png">
+                </figure>
+
+                <div class="post-text">
+                    <div class="post-entry">
+                        <a href="#">may 28,</a>
+                        <a href="#">2019 in Digital,</a> 
+                        <a href="#">Strategy</a>
+                        <a href="#"><i class="fa fa-comment fa-xs"> </i> 0 ,</a>
+                        <a href="#">by admin</a>
+                    </div>
+                    <h3>Inside report from the studio show.</h3>
+                    <p>When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile. Assuming that you will go the easy way and choose a theme for your WordPress website, the overall number of characteristics that you will need to keep in mind narrows down significantly.</p>
+
+                    <p>All the WordPress themes that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it. With such a wide range of choices at hand, we strongly advise you to stick to the WordPress Theme that is based on your business’ or a closely related field.</p>
+
+                    <h3 class="header-italic"><i class="fa fa-pause"></i> I’m as proud of many of the things we haven’t done as the things we have done.EMMA DOE, COMPANY CEO</h3>
+
+                    <p>When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile. Assuming that you will go the easy way and choose a theme for your WordPress website, the overall number of characteristics that you will need to keep in mind narrows down significantly.</p>
+
+                    <div class="profile">
+                        <img width="85" height="85" src="img/profile.png" alt="">
+                        <h3>admin</h3>
+                    </div>
+                    <div class="comment">
+                        <h3>LEAVE A REPLY</h3>
+                        <h3>Your email address will not be published. Required fields are marked *</h4>
+                        <textarea name="" id=""  rows="10"  placeholder="Your Message * "></textarea>
+                        <div class="input-flex">
+                            <input type="name" placeholder="Your Name *">
+                            <input type="e-mail" placeholder="Your E-mail * ">
+                        </div>
+                        <input type="website" placeholder="Your Website">
+                        <button>LEAVE A REPLY</button>
+                        <a href="news.html"><button>Back To posts</button></a>
+                    </div>
+                </div>
+
+                <div class="read-more">
+                    <button>READ MORE  <i class="fa fa-chevron-right"></i></button>
+                </div>
+            </article>
+            
+            <article class="post">
+                <figure>
+                    <img width="840" height="460" src="https://ld-wp73.template-help.com/imperion/presentation/wp-content/uploads/2019/07/post-3-770x460.png">
+                    <div class="news-navigation">
+                </figure>
+
+                <div class="post-text">
+                    <div class="post-entry">
+                        <a href="#">July 18,</a>
+                        <a href="#">2019 in Digital,</a> 
+                        <a href="#">Featured Fashion,</a> 
+                        <a href="#">Interview, Organization,</a>
+                        <a href="#">Strategy</a>
+                        <a href="#"><i class="fa fa-comment fa-xs"> </i> 0 ,</a>
+                        <a href="#">by admin</a>
+                    </div>
+                    <h3>Top 10 spring trends and how you wear them.</h3>
+                    <p>When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile. Assuming that you will go the easy way and choose a theme for your WordPress website, the overall number of characteristics that you will need to keep in mind narrows down significantly.</p>
+
+                    <p>All the WordPress themes that we have here have had a vast team of professional designers sketching, working and executing the ultimate visual look for it. With such a wide range of choices at hand, we strongly advise you to stick to the WordPress Theme that is based on your business’ or a closely related field.</p>
+
+                    <h3 class="header-italic"><i class="fa fa-pause"></i> I’m as proud of many of the things we haven’t done as the things we have done.EMMA DOE, COMPANY CEO</h3>
+
+                    <p>When you need your company to have a new website or if you venture on updating your old webpage with a new look and functionality, the choices are versatile. Assuming that you will go the easy way and choose a theme for your WordPress website, the overall number of characteristics that you will need to keep in mind narrows down significantly.</p>
+
+                    <div class="profile">
+                        <img width="85" height="85" src="img/profile.png" alt="">
+                        <h3>admin</h3>
+                    </div>
+                    <div class="comment">
+                        <h3>LEAVE A REPLY</h3>
+                        <h3>Your email address will not be published. Required fields are marked *</h4>
+                        <textarea name="" id=""  rows="10"  placeholder="Your Message * "></textarea>
+                        <div class="input-flex">
+                            <input type="name" placeholder="Your Name *">
+                            <input type="e-mail" placeholder="Your E-mail * ">
+                        </div>
+                        <input type="website" placeholder="Your Website">
+                        <button>LEAVE A REPLY</button>
+                        <a href="news.html"><button>Back To posts</button></a>
+                             
+                    </div>
+                </div>
+
+                <div class="read-more">
+                    <button>READ MORE  <i class="fa fa-chevron-right"></i></button>
+                </div>
+            </article>
+          
+        </div>
+
+        <aside class="news-navigation">
+
+            <div class="input-box">
+                <input type="text" placeholder="Enter Keyword ...">
+                <button>SEARCH</button>
+            </div>
+            <div class="recent-posts">
+                <h3>RECENT POSTS</h3>
+                <button class="article-link">Yes studio: from Paris with love.</button>
+                <button class="article-link">Inside report from the studio show.</button>
+                <button class="article-link">Top 10 spring trends and how you wear them.</button>
+                <a href="news.html" class="article-link on">All posts</a>
+            </div>
+
+            <div class="categories">
+                <h3>CATEGORIES</h3>
+                <ul>
+                    <li><a href=""><i class="fa fa-circle "></i> DIGITAL</a></li>
+                    <li><a href=""><i class="fa fa-circle "></i>FEATURED FASHION</a></li>
+                    <li><a href=""><i class="fa fa-circle "></i>INTERVIEW</a></li>
+                    <li><a href=""><i class="fa fa-circle "></i>ORGANIZATION</a></li>
+                    <li><a href=""><i class="fa fa-circle "></i>STRATEGY</a></li>
+                </ul>
+            </div>
+
+        </aside>
+    </div>
+    
+</section>
+
+<!--   footer     --->
+ <footer id="footer">
+     <div class="footer-content">
+         <div class="content-col">
+             <h4>LATEST POSTS</h4>
+             <a href="#">Yes studio: from Paris with love.</a>
+             <span>July 18, 2019</span>
+             <a href="#">Inside report from the studio show.</a>
+             <span>July 18, 2019</span>
+             <a href="#">Top 10 spring trends and how you wear them.</a>
+             <span>July 18, 2019</span>
+         </div>
+         <div class="content-col">
+                <h4>HEAD OFFICE</h4>
+                <span>4096 N Highland St, Arlington VA 32101,<br> USA</span>
+                <a href="#" style="color:#da5c48; margin: 20px 0 0;">imperion@demolink.org</a>
+                <a href="#" style="color:#da5c48; margin: 20px 0 ;">+800 1234 56 78</a>
+                <span >Mon-Fri: 9:30 – 21:00</span>
+                <span >Sat: 10:00 – 15:00</span>
+         </div>
+         <div class="content-col">
+                <h4>QUICK LINKS</h4>
+                <a href="index.html" >home</a>
+                <a href="projects.html">Project</a>
+                <a href="news.html" style="color:#da5c48;">News</a>
+                <a href="about.html" >About us</a> 
+         </div>
+         <div class="content-col">
+            <h4>NEWSLETTER</h4>
+            <div class="footer-input">
+                <input type="text" placeholder="Your Email Address">
+                <a href="#"> <i class="fa fa-envelope fa-2x"></i></a>
+            </div>
+            <div class="footer-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                <a href="https://twitter.com"  target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                <a href="https://linkedin.com"  target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+            </div>
+         </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <a href=""><img src="https://ld-wp.template-help.com/wordpress_imperion/presentation_v1/wp-content/themes/imperion/skins/presentation/assets/images/invert-logo.png" alt="Imperion" class="site-link__img"></a>
+            <p>&copy; 2019 L.N. All Rights Reserved.</p>
+        </div>
+    </div>
+ </footer>
+
+ 
+
+    <script src="js/general.js"></script>  
+    <script src="js/news.js"></script>     
+</body>
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Red Edition Apartment - Red Edition</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="loading"></div>
+    
+    <header id="header">
+       <nav class="nav">
+
+           <span class="nav-logo">
+               <a class="ch-color" href="index.html">red</a>
+           </span>
+
+           <div class="navbar-nav">
+               
+                <ul class="main-nav">
+                    <li class="nav-link underlined">
+                        <a class="ch-color" onclick="showCollection(event)" href="#">Collections</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="active ch-color" href="apartment.html">Red Edition Apartment</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="ch-color" href="professionals.html">Professionals</a>
+                    </li>
+                    <li class="nav-link  underlined">
+                        <a class="ch-color" href="news.html">News</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="ch-color" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="toggleSearchPanel(event)">
+                            <img class="search-svg ch-src" src="pictures/nav-svgs/search.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+           </div>
+
+           <div class="navbar-nav-right">
+             <ul>
+                <li class="nav-link" id="account-link">
+                    <a href="#"  class="ch-color"  >My account</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <img   class="heart-svg ch-src" src="pictures/nav-svgs/heart.svg" alt="">
+                    </a>
+                </li>
+                <li class="nav-link shop-hover">
+                    <a href="#"> 
+                        <img class="shop-svg ch-src" src="pictures/nav-svgs/shop.svg" alt="">
+                        <span>No products in the cart.</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <select  class="ch-color">
+                        <option value="en">en</option>
+                        <option value="geo">geo</option>
+                    </select>
+                </li>
+                <li class="nav-link manu">
+                    <a href="#" onclick="showMenuAside(event)">
+                        <img class="menu-svg ch-src" src="pictures/nav-svgs/menu.svg" alt="">
+                    </a>
+                </li>
+             </ul>
+           </div>
+
+           <div class="navbar-nav-aside">
+                <span class="close-nav-aside" onclick="hideMenuAside()" >&#10005;</span>
+
+                <div class="nav-aside-scrollable">
+                    <ul class="nav-header">
+                        <li class="nav-link">
+                            <a href="#">My account</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img   class="heart-svg" src="pictures/nav-svgs/heart-blc.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="toggleSearchPanel(event)">
+                                <img class="search-svg" src="pictures/nav-svgs/search-blc.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+        
+                    <ul class="main-nav">
+                        <li class="nav-link">
+                            <a onclick="showCollection(event)" href="#">Collections</a>
+                        </li>
+                        <li class="nav-link">
+                            <a class="active" href="apartment.html">Red Edition Apartment</a>
+                        </li>
+                        <li class="nav-link ">
+                            <a href="professionals.html">Professionals</a>
+                        </li>
+                        <li class="nav-link  ">
+                            <a href="news.html">News</a>
+                        </li>
+                        <li class="nav-link ">
+                            <a href="about.html">About us</a>
+                        </li>
+                    </ul>
+        
+                    <div class="nav-footer">
+                        <ul class="footer-container">
+                            <li class="footer-item">
+                                <h3>Help</h3>
+                                <ul>
+                                    <li><a href="#">Write us</a></li>
+                                    <li><a href="#">Terms of sale</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Shipping</a></li>
+                                    <li><a href="#">My account</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer-item">
+                                <h3>About</h3>
+                                <ul>
+                                    <li><a href="#">The Brand</a></li>
+                                    <li><a href="#">Designer</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer-item">
+                                <h3>Adress</h3>
+                                <ul>
+                                    <li><a href="#">Store locator</a></li>
+                                    <li><a href="#">Store</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
+
+           <aside class="collection-panel">
+               <div class="wrapper">
+
+                   <span class="close-collection" onclick="hideCollection(event)" >&#10005;</span>
+
+                   <div class="content" id="scrollable">
+
+                        <div class="collention-header">
+                            <span>Collections</span>
+                            <a href="#" onclick="hideCollection(event)" >All our products</a>
+                        </div>
+
+                        <ul class="collection-list">
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Sideboards</span>
+                                    <a href="#">Mirror sideboard</a>
+                                </span>  
+                                <img src="pictures/collection/item-2.jpg" alt="">
+                            </li>
+                            
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Living room table</span>
+                                    <a href="#">table Large Tea table</a>
+                                </span>  
+                                <img src="pictures/collection/item-4.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Coffee tables</span>
+                                    <a href="#">Lounge coffee table <br> Large coffee table <br> Small 50’s coffee table</a>
+                                </span>  
+                                <img src="pictures/collection/item-5.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Large Curved Sofa</span>
+                                    <a href="#">210Sofa 210Cane Sofa 160Sofa 120 </a>
+                                </span>  
+                                <img src="pictures/collection/item-1.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Accessories</span>
+                                    <a href="#">Pigalle Box</a>
+                                </span>  
+                                <img src="pictures/collection/item.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Sideboards</span>
+                                    <a href="#">Mirror sideboard</a>
+                                </span> 
+                                <img src="pictures/collection/item-2.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Living room table</span>
+                                    <a href="#">table Large Tea table</a>
+                                </span>  
+                                <img src="pictures/collection/item-4.jpg" alt="">
+                            </li>
+                        
+                        </ul>
+                   </div>
+
+               </div>
+           </aside>
+
+       </nav>
+
+       <form class="header-search " action="">
+            <div class="wrapper">
+                <span class="close-btn">&#10005;</span>
+                <label for="">
+                    <span class="search-bg">S</span>
+                    <span class="search-bg">e</span>
+                    <span class="search-bg">a</span>
+                    <span class="search-bg">r</span>
+                    <span class="search-bg">c</span>
+                    <span class="search-bg">h</span>
+                </label>
+
+                <input class="search-input" type="text" autofocus >
+                <span  class="search-underline">Search</span>
+                <span class="not-found">No results for this search</span>
+            </div>
+        </form>
+
+        <form action="" class="account">
+            <div class="wrapper">
+                <input type="text" placeholder=" Email address  ">
+                <input type="text" placeholder=" Password  ">
+
+                <div class="remember-me">
+                    <input type="checkbox"></input>
+                    <span>Remember me</span>
+                </div>
+                <a href="" class="forgot-pass"> Forgot your password?</a>
+
+                <button>Login</button>
+
+                <a href="#" class="no-acc">I do not have an account yet</a>
+            </div>
+        </form>
+
+    </header>
+
+     <!-- section 1 - hero-->
+    <section id="apartment-hero">
+       <figure>
+           <img  id="hero-bg" src="pictures/apartment.html/apartment-hero.jpg" alt="">
+
+            <figcaption>
+                <h1>Red Edition Apartment</h1>
+            </figcaption>
+       </figure>
+    </section>
+
+    <!-- section 2 - apartment-info-->
+    <section id="apartment-info">
+        <div class="container">
+            <div class="header">
+                <h3>Red Edition apartment</h3>
+                <p>The elegant art of living within the French style.</p>
+            </div>
+
+            <div class="text-wrapper">
+
+                <div class="left">
+                    <p>Our boutique showroom is open from Monday to Saturday. <br>
+                        By appointment Monday, Tuesday, Thursday and Friday from 9:30 to 18:30. <br>
+                        Free access on Wednesdays from 9:30 to 18:30 and Saturday from 11:30 to 18:30.
+                    </p>
+                </div>
+                <div class="right">
+                    <p>
+                        38 rue des Blancs Manteaux   <br>
+                        75004 Paris   <br>
+                        1st floor - Main staircase   <br>  <br>
+
+                        <a href="#">info@rededition.com</a>     <br>
+                        <a href="#">+33 (0) 1 43 37 02 87</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 3 - offers-->
+    <section id="apartment-offers">
+        <div class="container">
+
+            <div class="offers-image">
+                <img src="pictures/apartment.html/offers.jpg" alt="">
+            </div>
+
+            <div class="offers-text">
+                <p> The Red Apartment offers a personable and bespoke sales experience.</p>
+
+                <p>You may call us anytime it’s convenient for you, whether it’s five minutes to two weeks before visiting us.</p>
+
+                <p>Located at the heart of the Marais neighborhood, the Red Apartment can be found in a private estate after you ascend a flight of stairs to the first floor.</p>
+
+                <p>The entryway, embellished with the brand’s own creations as well as other contemporary designs, sets the tone of the space.  It’s an original experience set in 120 m2 which is yours for the moment.</p>
+
+                <p>Red Edition immerses you in the Red universe in order to inspire you, assist you, and give you ideas.</p>
+
+                <p>While sipping your coffee you will discover the latest Red Edition pieces, works from various designers, vintage pieces, and exclusive access to many labels.</p>
+
+                <p>We hope to create a special moment which allows you to fully experience Red Edition in its fullness.</p>
+
+                <p>&nbsp;</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 4 - selection -->
+    <section id="selection">
+        <div class="container">
+            <div class="header-selection">
+                <h3>The RED Edition selection</h3>
+                <p>Immerse yourself into our beautiful designs and choose among our selection the item you desire</p>
+            </div>
+            <div class="slideshow">
+                <figure>
+                    <img src="pictures/apartment.html/slideshow-1.jpg" alt="">
+                    <figcaption>
+                        <span class="name">Brass pots <br> Skultuna</span>
+                        <span class="price">From 50&euro;</span>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="pictures/apartment.html/slideshow-2.jpg" alt="">
+                    <figcaption>
+                        <span class="name">Wood Basket Emma  <br> Natural  Edwarn</span>
+                        <span class="price">500&euro;</span>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="pictures/apartment.html/slideshow-3.jpg" alt="">
+                    <figcaption>
+                        <span class="name">Painting Way to Sandham <br> By Baptiste PENIN</span>
+                        <span class="price">2 000&euro;</span>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="pictures/apartment.html/slideshow-4.jpg" alt="">
+                    <figcaption>
+                        <span class="name">Vintage brass lamp <br> </span>
+                        <span class="price">990&euro;</span>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="pictures/apartment.html/slideshow-5.jpg" alt="">
+                    <figcaption>
+                        <span class="name">Brass wall sculpture <br> Curtis Jere</span>
+                        <span class="price">1 390&euro;</span>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src="pictures/apartment.html/slideshow-6.jpg" alt="">
+                    <figcaption>
+                        <span class="name">Oursin lamp <br> Marc Beaudeau Dutilleul</span>
+                        <span class="price">590&euro;</span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 5 - text-picture -->
+    <section id="text-picture">
+        <div class="container">
+            <div class="text">
+                <p>The elegant art of living within the French style</p>
+            </div>
+            <div class="picture" >  
+                <img src="pictures/apartment.html/yellow-chair.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <!-- section 6 - slideshow-->
+    <section id="slideshow">
+        
+        <div class="slider">
+            <figure>
+                <img src="pictures/apartment.html/slider/1.jpg" alt="">
+                <figcaption>
+                    <span class="slide-counter">
+                        <span>01</span>
+                        <span class="line">_____</span>
+                        <span>04</span>
+                    </span>
+                </figcaption>
+            </figure>
+              <figure>
+                <img src="pictures/apartment.html/slider/2.jpg" alt="">
+                <figcaption>
+                    <span class="slide-counter">
+                        <span>02</span>
+                        <span class="line">_____</span>
+                        <span>04</span>
+                    </span>
+                </figcaption>
+            </figure>
+              <figure>
+                <img src="pictures/apartment.html/slider/3.jpg" alt="">
+                <figcaption>
+                    <span class="slide-counter">
+                        <span>03</span>
+                        <span class="line">_____</span>
+                        <span>04</span>
+                    </span>
+                </figcaption>
+            </figure>
+              <figure>
+                <img src="pictures/apartment.html/slider/4.jpg" alt="">
+                <figcaption>
+                    <span class="slide-counter">
+                        <span>04</span>
+                        <span class="line">_____</span>
+                        <span>04</span>
+                    </span>
+                </figcaption>
+            </figure>
+        </div>
+
+        <span class="slide-index-box">
+            <span class="slide-index on"></span>
+            <span class="slide-index"></span>
+            <span class="slide-index"></span>
+            <span class="slide-index"></span>
+        </span>
+
+    </section>
+
+    <!-- section 7 - second collection sets without  figcaption links   -->
+
+    <section id="section-collection" style="background: #fff;">
+        <div class="container">
+            <div class="wrapper small-wrapper">
+                <figure class="collection-set">
+                    <img src="pictures/apartment.html/item-2.jpg" alt="">          
+                </figure>
+
+                <figure class="collection-set">
+                        <img src="pictures/apartment.html/item-1.jpg" alt="">
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- - footer  main  -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+    
+                    <div class="col">
+                        <a href="#">Secure payment</a>
+                        <p>Visa, American Express, Mastercard and 3x free</p>
+                    </div>
+                    <div class="col">
+                        <a href="#">Delivery</a>
+                        <p>Home Delivery on Your Schedule</p>
+                    </div>
+                    <div class="col">
+                        <a href="#">Customer service</a>
+                        <p>9.30am-6.30pm Monday to Friday</p>
+                        <a href="#">+33 (0) 1 43 37 02 87 / info@rededition.com</a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="container">
+
+               <div class="footer-item">
+                    <h2>Help</h2>
+                    <span>Write us</span> <br>
+                    <a href="#" >info@rededition.com</a>
+                       
+                    <ul>
+                        <li>
+                            <a href="#">Terms of sale</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">Shipping</a>
+                        </li>
+                        <li>
+                            <a href="#">My account</a>
+                        </li>
+                    </ul>
+               </div>
+
+               <div class="footer-item">
+                   <h2>About</h2>
+                   <ul>
+                        <li>
+                            <a href="#">The Brand</a>
+                        </li>
+                        <li>
+                            <a href="#"> Designer</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                   <h2>Adress</h2>
+                   <ul>
+                        <li>
+                            <a href="#">Store locator</a>
+                        </li>
+                        <li>
+                            <a href="#">Login to the reseller area</a>
+                        </li>
+                    </ul>
+               </div>
+
+               <div class="footer-item">
+                   <h2>Follow us</h2>
+                   <form action="">
+                       <h2>Newsletter</h2>
+
+                       <div class="input-block">
+                            <input type="text" placeholder="Email address">
+                            <button>	&gt; </button>
+                       </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+
+
+
+    <script src="scripts/apartment.js"></script>
+    <script src="scripts/general.js"></script>
+</body>
+</html>

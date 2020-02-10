@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home - Red Edition</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Istok+Web&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div id="loading"></div>
+
+    <!-- header-->
+    <header id="header">
+       <nav class="nav">
+
+           <span class="nav-logo">
+               <a class="ch-color" href="">red</a>
+           </span>
+
+           <div class="navbar-nav">
+               
+                <ul class="main-nav">
+                    <li class="nav-link underlined">
+                        <a class="ch-color" onclick="showCollection(event)" href="#">Collections</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="ch-color" href="apartment.html">Red Edition Apartment</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="ch-color" href="professionals.html">Professionals</a>
+                    </li>
+                    <li class="nav-link  underlined">
+                        <a class="ch-color" href="news.html">News</a>
+                    </li>
+                    <li class="nav-link underlined">
+                        <a class="ch-color" href="about.html">About us</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#" onclick="toggleSearchPanel(event)">
+                            <img class="search-svg ch-src" src="pictures/nav-svgs/search.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+           </div>
+
+           <div class="navbar-nav-right">
+             <ul>
+                <li class="nav-link" id="account-link">
+                    <a href="#"  class="ch-color"  >My account</a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <img   class="heart-svg ch-src" src="pictures/nav-svgs/heart.svg" alt="">
+                    </a>
+                </li>
+                <li class="nav-link shop-hover">
+                    <a href="#"> 
+                        <img class="shop-svg ch-src" src="pictures/nav-svgs/shop.svg" alt="">
+                        <span>No products in the cart.</span>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <select  class="ch-color">
+                        <option value="en">en</option>
+                        <option value="geo">geo</option>
+                    </select>
+                </li>
+                <li class="nav-link manu">
+                    <a href="#" onclick="showMenuAside(event)">
+                        <img class="menu-svg ch-src" src="pictures/nav-svgs/menu.svg" alt="">
+                    </a>
+                </li>
+             </ul>
+           </div>
+
+           <div class="navbar-nav-aside">
+                <span class="close-nav-aside" onclick="hideMenuAside()" >&#10005;</span>
+
+                <div class="nav-aside-scrollable">
+                    <ul class="nav-header">
+                        <li class="nav-link">
+                            <a href="#">My account</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img   class="heart-svg" src="pictures/nav-svgs/heart-blc.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" onclick="toggleSearchPanel(event)">
+                                <img class="search-svg" src="pictures/nav-svgs/search-blc.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+        
+                    <ul class="main-nav">
+                        <li class="nav-link">
+                            <a onclick="showCollection(event)" href="#">Collections</a>
+                        </li>
+                        <li class="nav-link">
+                            <a href="apartment.html">Red Edition Apartment</a>
+                        </li>
+                        <li class="nav-link ">
+                            <a href="professionals.html">Professionals</a>
+                        </li>
+                        <li class="nav-link  ">
+                            <a href="news.html">News</a>
+                        </li>
+                        <li class="nav-link ">
+                            <a href="about.html">About us</a>
+                        </li>
+                    </ul>
+        
+                    <div class="nav-footer">
+                        <ul class="footer-container">
+                            <li class="footer-item">
+                                <h3>Help</h3>
+                                <ul>
+                                    <li><a href="#">Write us</a></li>
+                                    <li><a href="#">Terms of sale</a></li>
+                                    <li><a href="#">FAQ</a></li>
+                                    <li><a href="#">Shipping</a></li>
+                                    <li><a href="#">My account</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer-item">
+                                <h3>About</h3>
+                                <ul>
+                                    <li><a href="#">The Brand</a></li>
+                                    <li><a href="#">Designer</a></li>
+                                    <li><a href="#">Terms & Conditions</a></li>
+                                </ul>
+                            </li>
+                            <li class="footer-item">
+                                <h3>Adress</h3>
+                                <ul>
+                                    <li><a href="#">Store locator</a></li>
+                                    <li><a href="#">Store</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+           </div>
+
+           <aside class="collection-panel">
+               <div class="wrapper">
+
+                   <span class="close-collection" onclick="hideCollection(event)" >&#10005;</span>
+
+                   <div class="content" id="scrollable">
+
+                        <div class="collention-header">
+                            <span>Collections</span>
+                            <a href="#" onclick="hideCollection(event)" >All our products</a>
+                        </div>
+
+                        <ul class="collection-list">
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Sideboards</span>
+                                    <a href="#">Mirror sideboard</a>
+                                </span>  
+                                <img src="pictures/collection/item-2.jpg" alt="">
+                            </li>
+                            
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Living room table</span>
+                                    <a href="#">table Large Tea table</a>
+                                </span>  
+                                <img src="pictures/collection/item-4.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Coffee tables</span>
+                                    <a href="#">Lounge coffee table <br> Large coffee table <br> Small 50’s coffee table</a>
+                                </span>  
+                                <img src="pictures/collection/item-5.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Large Curved Sofa</span>
+                                    <a href="#">210Sofa 210Cane Sofa 160Sofa 120 </a>
+                                </span>  
+                                <img src="pictures/collection/item-1.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Accessories</span>
+                                    <a href="#">Pigalle Box</a>
+                                </span>  
+                                <img src="pictures/collection/item.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Sideboards</span>
+                                    <a href="#">Mirror sideboard</a>
+                                </span> 
+                                <img src="pictures/collection/item-2.jpg" alt="">
+                            </li>
+
+                            <li class="collection-item">
+                                <span class="description">
+                                    <span>Living room table</span>
+                                    <a href="#">table Large Tea table</a>
+                                </span>  
+                                <img src="pictures/collection/item-4.jpg" alt="">
+                            </li>
+                        
+                        </ul>
+                   </div>
+
+               </div>
+           </aside>
+
+       </nav>
+
+       <form class="header-search " action="">
+            <div class="wrapper">
+                <span class="close-btn">&#10005;</span>
+                <label for="">
+                    <span class="search-bg">S</span>
+                    <span class="search-bg">e</span>
+                    <span class="search-bg">a</span>
+                    <span class="search-bg">r</span>
+                    <span class="search-bg">c</span>
+                    <span class="search-bg">h</span>
+                </label>
+
+                <input class="search-input" type="text" autofocus >
+                <span  class="search-underline">Search</span>
+                <span class="not-found">No results for this search</span>
+            </div>
+        </form>
+
+        <form action="" class="account">
+            <div class="wrapper">
+                <input type="text" placeholder=" Email address  ">
+                <input type="text" placeholder=" Password  ">
+
+                <div class="remember-me">
+                    <input type="checkbox"></input>
+                    <span>Remember me</span>
+                </div>
+                <a href="" class="forgot-pass"> Forgot your password?</a>
+
+                <button>Login</button>
+
+                <a href="#" class="no-acc">I do not have an account yet</a>
+            </div>
+        </form>
+
+    </header>
+
+     <!-- section 1 - hero-->
+    <section id="hero">
+        <div class="hero-wrapper">
+
+            <figure class="figure-slide">
+                <img class="figure-bg" src="pictures/hero-1.png" alt="">
+
+                <figcaption class="figcaption">
+                    <span class="slide-text">
+                        <div class="text">
+                            <span>Cane</span>
+                            <span>Sofa</span>
+                            <span class="top">210</span>
+                        </div>
+                    </span>
+                    
+                    <div class="underlined">
+                        <a href="">Discover</a>
+                    </div>
+
+                    <span class="slide-counter">
+                        <span>01</span>
+                        <span class="line">_____</span>
+                        <span>03</span>
+                    </span>
+
+                </figcaption>
+             </figure>
+
+             <figure class="figure-slide">
+                <img  class="figure-bg" src="pictures/hero-2.jpg" alt="">
+
+                <figcaption class="figcaption">
+                    <span class="slide-text">
+                        <div class="text">
+                            <span>Felice</span>
+                            <span>dining</span>
+                            <span>table</span>
+                        </div>
+                    </span>
+                    
+                    <div class="underlined">
+                        <a href="">Discover</a>
+                    </div>
+
+                    <span class="slide-counter">
+                        <span>02</span>
+                        <span class="line">_____</span>
+                        <span>03</span>
+                    </span>
+
+                </figcaption>
+             </figure>
+
+             <figure class="figure-slide">
+                <img  class="figure-bg" src="pictures/hero-3.jpg" alt="">
+
+                <figcaption class="figcaption">
+                    <span class="slide-text">
+                        <div class="text">
+                            <span>Cane</span>
+                            <span>armchair</span>
+                        </div>
+                    </span>
+                    
+                    <div class="underlined">
+                        <a href="">Discover</a>
+                    </div>
+
+                    <span class="slide-counter">
+                        <span>03</span>
+                        <span class="line">_____</span>
+                        <span>03</span>
+                    </span>
+
+                </figcaption>
+             </figure>
+
+             <span class="slide-index-box">
+                <span class="slide-index on"></span>
+                <span class="slide-index"></span>
+                <span class="slide-index"></span>
+            </span>
+           
+        </div>
+    </section>
+
+    <!-- section 2  - collection sets  -->
+    <section id="section-collection">
+        <div class="container">
+            <div class="wrapper">
+                <figure class="collection-set">
+                    <img src="pictures/set-1.jpg" alt="">
+
+                    <figcaption>
+                         <a href="#" class="link link--white"> 
+                            <span>Collection</span>
+                            <h2>Cane 210</h2> 
+                        </a>
+                    </figcaption>
+                </figure>
+
+                <figure class="collection-set">
+                    <img src="pictures/set-2.jpg" alt="">
+
+                    <figcaption>
+                        <a href="#" class="link link--white"> 
+                            <span>Collection</span>
+                            <h2>Cane 160</h2> 
+                        </a>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- section 3  - about-history  -->
+    <section id="about-history">
+        <div class="container">
+            <blockquote id="quote-spans">
+                <span>I have been</span> <br>
+                <span>passionate about</span> <span class="font-2"> creating</span> <br>
+                <span>simple,</span> <span class="font-2">beautiful,</span> <span>colorful</span> <br>
+                <span>& furniture</span> <span class="font-2">designs</span>
+            </blockquote>
+
+            <div class="discover-link">
+                <a href="">Discover our history</a>
+            </div>
+
+            <div class="carousel-container">
+                <button id="prevbtn"> &lt;</button>
+                <button id="nextbtn"> &gt;</button>
+        
+                <div class="carousel-slider">
+        
+                    <figure class="slide">
+                        <img src="pictures/carousel-1.jpg">
+                        <figcaption class="fig">
+                           <a href="">Cane Sofa 160</a>
+                        </figcaption>
+                    </figure>
+        
+                    <figure class="slide">
+                        <img src="pictures/carousel-2.jpg">
+                        <figcaption class="fig">
+                           <a href="">Horizon Large Console</a>
+                        </figcaption>
+                    </figure>
+        
+                    <figure class="slide">
+                        <img src="pictures/carousel-3.jpg">
+                        <figcaption class="fig">
+                           <a href="">Stool</a>
+                        </figcaption>
+                    </figure>
+        
+                    <figure class="slide">
+                        <img src="pictures/carousel-1.jpg">
+                        <figcaption class="fig">
+                           <a href="">Cane Sofa 160</a>
+                        </figcaption>
+                    </figure>
+        
+                    <figure class="slide">
+                        <img src="pictures/carousel-2.jpg">
+                        <figcaption class="fig">
+                           <a href="">Horizon Large Console</a>
+                        </figcaption>
+                    </figure>
+                    
+                    <figure class="slide">
+                        <img src="pictures/carousel-3.jpg">
+                        <figcaption class="fig">
+                           <a href="">Stool</a>
+                        </figcaption>
+                    </figure>
+                            
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+     
+     <!-- section 4 - our must haves-->
+     <section id="must-haves"> 
+      <div class="container">
+            <h2 class="must-haves-h2">Our must-haves</h2>
+
+            <div class="products">
+                <figure class="product-item">
+                    <img src="pictures/product-items/111.jpg" alt="">
+                    <figcaption>
+                           <h3><a href="">Floating armchair</a></h3> 
+                    </figcaption>
+                </figure>
+
+                <figure class="product-item">
+                    <img src="pictures/product-items/222.jpg" alt="">
+                    <figcaption>
+                            <h3><a href="">Divider</a></h3> 
+                    </figcaption>
+                </figure>
+
+                <figure class="product-item">
+                    <img src="pictures/product-items/333.jpg" alt="">
+                    <figcaption>
+                            <h3><a href="">Ellipse mirror</a></h3> 
+                    </figcaption>
+                </figure>
+
+                <figure class="product-item">
+                    <img src="pictures/product-items/444.jpg" alt="">
+                    <figcaption>
+                            <h3><a href="">Totem mirror</a></h3> 
+                    </figcaption>
+                </figure>
+
+                <figure class="product-item">
+                    <img src="pictures/product-items/555.jpg" alt="">
+                    <figcaption>
+                            <h3><a href="">Cane Chair</a></h3> 
+                    </figcaption>
+                </figure>
+
+                <figure class="product-item">
+                    <img src="pictures/product-items/666.jpg" alt="">
+                    <figcaption>
+                            <h3><a href="">Sofa 210</a></h3> 
+                    </figcaption>
+                </figure>
+
+                <figure class="product-item">
+                    <img src="pictures/product-items/777.jpg" alt="">
+                    <figcaption>
+                            <h3><a href="">Lucid Dream Lamp</a></h3> 
+                    </figcaption>
+                </figure>
+                
+            </div>
+
+            <div class="all-product-link">
+                <a href="">All our products</a>
+            </div>
+       
+      </div>
+
+    </section>
+
+    <!-- section 5 - Red Edition Apartment  -->
+    <section id="Apartment">
+        <div class="content">
+            <h1>Red Edition Apartment</h1>
+            <a href="#">Discover</a>
+        </div>
+    </section>
+
+    <!-- section 6 - News  -->
+    <section id="news">
+        <div class="container">
+
+            <div class="information">
+                <h2>News</h2>
+                <p>The Journal is a space where we post our thoughts on trends, collaborations with other designers, stuff we love at the moment, and news. Not to mention Red events that can't be missed!</p>
+                <a href="">Discover</a>
+            </div>
+
+            <div class="pictures">
+                <div class="first-p">
+                    <img src="pictures/news-1.jpg" alt="">
+                </div>
+                <div class="second-p">
+                    <img src="pictures/news-2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- - footer  -->
+    <footer id="footer">
+        <div class="footer-top">
+            <div class="container">
+    
+                    <div class="col">
+                        <a href="#">Secure payment</a>
+                        <p>Visa, American Express, Mastercard and 3x free</p>
+                    </div>
+                    <div class="col">
+                        <a href="#">Delivery</a>
+                        <p>Home Delivery on Your Schedule</p>
+                    </div>
+                    <div class="col">
+                        <a href="#">Customer service</a>
+                        <p>9.30am-6.30pm Monday to Friday</p>
+                        <a href="#">+33 (0) 1 43 37 02 87 / info@rededition.com</a>
+                    </div>
+            </div>
+        </div>
+
+        <div class="footer-main">
+            <div class="container">
+
+               <div class="footer-item">
+                    <h2>Help</h2>
+                    <span>Write us</span> <br>
+                    <a href="#" >info@rededition.com</a>
+                       
+                    <ul>
+                        <li>
+                            <a href="#">Terms of sale</a>
+                        </li>
+                        <li>
+                            <a href="#">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#">Shipping</a>
+                        </li>
+                        <li>
+                            <a href="#">My account</a>
+                        </li>
+                    </ul>
+               </div>
+
+               <div class="footer-item">
+                   <h2>About</h2>
+                   <ul>
+                        <li>
+                            <a href="#">The Brand</a>
+                        </li>
+                        <li>
+                            <a href="#"> Designer</a>
+                        </li>
+                        <li>
+                            <a href="#">Terms & Conditions</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-item">
+                   <h2>Adress</h2>
+                   <ul>
+                        <li>
+                            <a href="#">Store locator</a>
+                        </li>
+                        <li>
+                            <a href="#">Login to the reseller area</a>
+                        </li>
+                    </ul>
+               </div>
+
+               <div class="footer-item">
+                   <h2>Follow us</h2>
+                   <form action="">
+                       <h2>Newsletter</h2>
+
+                       <div class="input-block">
+                            <input type="text" placeholder="Email address">
+                            <button>	&gt; </button>
+                       </div>
+                   </form>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+
+     
+<script src="scripts/index.js"></script>
+<script src="scripts/general.js"></script>
+
+ 
+</body>
+</html>

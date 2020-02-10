@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>new site full</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+
+<header id="site-header">
+    <!-- top info bar -->
+    <div class="top-bar-info">
+        <div class="container">
+            <div class="top-bar-wrap">
+                <div class="top-content-left">
+                    <a href="#" class="top-content-block">
+                        <i class="fa fa-phone fa-lg"> </i>
+                        <span>  +800 123 45 67</span>
+                    </a>
+                    <a href="#" class="top-content-block">
+                        <i class="fa fa-envelope fa-lg"> </i>
+                        <span> INFO@COMPANY.COM</span>
+                    </a>
+                    <div class="top-content-block">
+                        <i class="fa fa-map-marker fa-lg"> </i>
+                        <span>121 SOMETHING STREET, CITY </span>
+                    </div>
+                </div>
+                <div class="top-content-right">
+                    <div class="sign">
+                        <a href="#" onclick="openModal(0, event)">LOGIN</a> 
+                        <span>|</span>
+                        <a href="#" onclick="openModal(1, event)">SIGN UP</a>
+                    </div> 
+                    <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                    <a href="https://twitter.com"  target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a href="https://linkedin.com"  target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- modals  -->
+    <div id="myModal">
+        <div class="modal-container">
+            <div class="close" onclick="closeModal(0, event)" >+</div> 
+            <img src="img/login.png" alt="">
+            <h2>LOGIN</h2>
+            <form action="">
+                <input type="email" placeholder="E-Mail" autofocus >
+                <input type="password" placeholder="Password">
+    
+                <div class="signup-link">
+                    <span>Don't have an account? Click here to</span>
+                    <a id="signup-shift" href="#" onclick="switchModals(0, 1)">Sign up</a>
+                </div>
+                <div class="rememberMe">
+                    <input type="checkbox" id="fruit1" >
+                    <label for="fruit1">Remember me</label>
+                </div>
+                <a href="#" onclick="closeModal(0, event)" class="subbmit" >LOGIN</a>
+            </form>
+        </div>
+    </div>
+    
+    <div id="myModal-second">
+        <div class="modal-container second-container">
+            <div class="close" onclick="closeModal(1, event)" >+</div>
+            <img src="img/login.png" alt="">
+            <h2>SIGN UP</h2>
+            <form action="">
+                <input type="login" placeholder="Login" autofocus>
+                <input type="email" placeholder="E-Mail" >
+                <input type="password" placeholder="Password">
+                <input type="password" placeholder="Repeat Password">
+                <div class="signup-link">
+                    <span>Already have an account?    </span>
+                    <a id="login-shift" href="#" onclick="switchModals(1, 0)">login</a>
+                </div>
+                <a href="#" onclick="closeModal(1, event)" class="subbmit" >SIGN UP</a>
+            </form>
+        </div>
+    </div>
+
+    <!-- navigation -->
+    <nav class="navbar">
+        <div class="container">
+
+            <div class="site-branding">
+                <a href=""><img src="https://ld-wp.template-help.com/wordpress_imperion/presentation_v1/wp-content/themes/imperion/skins/presentation/assets/images/invert-logo.png" alt="Imperion" class="site-link__img"></a>
+            </div>
+    
+            <div class="navbar-menu">
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+            </div>
+
+            <ul class="navbar-nav">
+                <li>
+                    <a href="index.html" class="navbar-link active">home</a> 
+                </li>
+                <li>
+                    <a href="projects.html" class="navbar-link">projects</a>
+                    <i class="fa fa-sort-down"></i>
+                    <ul class="dropdown">
+                        <h4>projects & stuff</h4>
+                        <li><a href="#"> dropdown item </a></li>
+                        <li><a href="#"> the item  </a></li>
+                        <li><a href="#">dropdown item </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="news.html" class="navbar-link">news</a>
+                    <i class="fa fa-sort-down"></i>
+                    <ul class="dropdown">
+                        <h4>daily news</h4>
+                        <li><a href="#"> news place</a></li>
+                        <li><a href="#">dropdown item </a></li>
+                        <li><a href="#"> the item  </a></li>
+                        <li><a href="#">dropdown item </a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="about.html" class="navbar-link">about us</a>
+                    <i class="fa fa-sort-down "></i>
+                    <ul class="dropdown">
+                        <h4>who we are</h4>
+                        <li><a href="#"> dropdown item </a></li>
+                        <li><a href="#"> the item  </a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+ <!--           hero    - -->
+<section id="hero">
+  <div class="overlay"> 
+    <div class="hero-content">
+        <h1 class="heading">think in motion</h1>
+        <p>we create. we develop. we inspire.</p>
+        <button type="button" class="btn-1"><a href="about.html" class="navbar-link">who we are</a></button>
+        <button type="button" class="btn-2"><a href="about.html" class="navbar-link">get in touch</a></button>
+    </div>
+    <div class="bullets">
+        <div class="bullet cyrcle-1 "></div>
+        <div class="bullet cyrcle-2 "></div>
+        <div class="bullet cyrcle-3 "></div>
+    </div>
+  </div>
+</section>
+
+ <!--    Our company- section 1 --->
+
+ <section id="our-company">
+     <div class="container">
+        <h1>WELCOME TO OUR COMPANY</h1>
+        <div class="row">
+            <div class="col-left">
+                <p>TO MEET <span style="color: #da5c48;">TODAY'S CHALLENGES</span> , WE'VE CREATED A UNIQUE, MORE PERSONAL APPROACH TO THE INVESTING.</p>
+            </div>
+            <div class="col-right">
+                <p>With a community of over 380 million users (and a majority age group being 21 to 37), wouldn’t you want to make sure you’re monitoring what people are posting on social networks? Especially if the demographic of your audience falls in that age range.</p>
+            </div>
+        </div>
+     </div>
+ </section>
+
+ <!--    What we do-  section 2 --->
+<section id="what-we-do">
+    <div class="element-wrap">
+        <div class="first-element element">
+            <div class="element-overlay">
+                <h4>WHAT WE DO</h4>
+                <span>______</span>
+                <span></span>
+                <h1>SERVICES</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur sit amet consectetur  amet consecadg elit. Quaectetur adipisicing elit animi.</p>
+            </div>
+        </div>
+        <div class="second-element element">
+            <div class="element-overlay">
+                <h4>WHAT WE OFFER</h4>
+                <span>______</span>
+                <span></span>
+                <h1>MARKETING</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicinglit Quae elit. Quaerat,consectetur adipisicing elit. Qu animi.</p>
+            </div>
+        </div>
+        <div class="third-element element">
+            <div class="element-overlay">
+                <h4>WHAT WE PLAN</h4>
+                <span>______</span>
+                <span></span>
+                <h1>SUPPORT</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quaerat,consectetur adipisicing elit. Qu animi.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="element-wrap-bottom">
+        <div class="element-widget">
+            <span> <i class="fa fa-table fa-3x"></i> </span>
+            <h4 class="countUp-item">0</h4>
+            <p>COMPANY<br>ESTABLISHED</p>
+        </div>
+        <div class="element-widget">
+            <span> <i class="fa fa-folder-open fa-3x"></i> </span>
+            <h4 class="countUp-item">0</h4>
+            <p>PROJECTS<br>DONE</p>
+        </div>
+        <div class="element-widget">
+            <span> <i class="fa fa-connectdevelop fa-3x"></i> </span>
+            <h4 ><span class="countUp-item">0</span>+</h4>
+            <p>BUSINESS<br>PARTHNERS</p>
+        </div>
+        <div class="element-widget">
+            <span> <i class="fa fa-universal-access fa-3x"></i> </span>
+            <h4 class="countUp-item">0</h4>
+            <p>HAPPY<br>CLIENTS</p>
+        </div>
+    </div>   
+</section>
+
+ <!--    presentation -  section 3 --->
+ <section id="presentation">
+    <div class="presentation-header">
+        <h1>AMAZING VIDEOS & PRESENTATIONS</h1>
+        <span>WE CREATE. WE DEVELOP. WE INSPIRE.</span>
+        <a href="about.html"><button>WHO WE ARE</button></a>
+    </div>
+    <div class="container">
+        <div class="presentation-element">
+            <span><i class="fa fa-balance-scale fa-3x"></i></span>
+            <h4>STRATEGY</h4>
+            <p>We focus on the needs of small to middle market businesses, not the Fortune 5000.</p>
+        </div>
+        <div class="presentation-element">
+            <span><i class="fa fa-calendar fa-3x"></i></span>
+            <h4>BUSINESS PLAN</h4>
+            <p>We work closely with you to understand your goals and then develop your entire business plan.</p>
+        </div>
+         <div class="presentation-element">
+            <span><i class="fa fa-tasks fa-3x"></i></span>
+            <h4>MARKETING PLANS</h4>
+            <p>Building a successful, sustainable business requires both planning and execution.</p>
+        </div>
+        <div class="presentation-element">
+           <span><i class="fa fa-align-left fa-3x"></i></span>
+            <h4>OPTIMIZE DEALS</h4>
+            <p>We work closely with you to understand your goals and then develop your entire business plan.</p>
+        </div>
+        <div class="presentation-element">
+           <span><i class="fa fa-university fa-3x"></i></span>
+            <h4>BUSINESS STUDIES</h4>
+            <p>Building a successful, sustainable business requires both planning and execution.</p>
+        </div>
+        <div class="presentation-element">
+           <span><i class="fa fa-search fa-3x"></i></span>
+            <h4>MARKET RESEARCH</h4>
+            <p>We work closely with you to and then develop your entire business plan.</p>
+        </div>
+        <div class="presentation-element">
+            <span><i class="fa fa-object-group fa-3x"></i></span>
+            <h4>BUSINESS GROWTH</h4>
+            <p>Own success at every turn. Uncover and deliver on opportunities that build lasting value.</p>
+        </div>
+        <div class="presentation-element">
+            <span><i class="fa fa-id-badge fa-3x"></i></span>
+            <h4>STIMULATE INNOVATION</h4>
+            <p>We work closely with you to understand your goals and then your entire business plan.</p>
+        </div>
+        
+    </div>
+ </section>
+
+<!--    works-skills -  section 4 --->
+<section id="works-skills">
+
+    <h2 class="works-header">OUR LATEST WORKS</h2>
+    <div class="our-works">
+        <figure class="works-figure">
+            <img src="img/works-1.jpg" alt="" style="width:100%">
+            <figcaption>
+                <div class="fig-content">
+                    <span>STRATEGY</span>
+                    <h2>GETTING STARTED</h2>
+               </div>
+            </figcaption>
+        </figure>
+        <figure class="works-figure">
+            <img src="img/works-2.jpg" alt="" style="width:100%">
+            <figcaption>
+               <div class="fig-content">
+                    <span>ADVANCED ANALYTICS, STRATEGY</span>
+                    <h2>GLOBAL PRIVATE EQUITY REPORT 2019</h2>
+               </div>
+            </figcaption>
+        </figure>
+        <figure class="works-figure">
+            <img src="img/works-3.jpg" alt="" style="width:100%">
+            <figcaption>
+               <div class="fig-content">
+                    <span>ORGANIZATION, STRATEGY</span>
+                    <h2>REINVENTING THE ROLE OF MEDICAL AFFAIRS</h2>
+               </div>
+            </figcaption>
+        </figure>
+        <figure class="works-figure">
+            <img src="img/works-4.jpg" alt="" style="width:100%">
+            <figcaption>
+                 <div class="fig-content">
+                    <span>CORPORATE FINANCE, DIGITAL</span>
+                    <h2>WINNING THE RACE FOR DIGITAL COMMERCE</h2>
+               </div>
+            </figcaption>
+        </figure>   
+    </div>
+
+    <div class="people-comments">
+        <h2 class="comment-header">WHAT PEOPLE SAY</h2>
+
+        <div class="people-slider">
+            <div class="slide">
+               <img src="img/person-2.webp" alt="">
+               <p> this project Lorem ipsum dolor sit amet consectetur adipisicing elm dolor amet consectetur dipisicing em dolor sit amet consectetur adipisi adipi cing adipi onsectetur adipi sicingonse ctetur adipisicing eit eit.  
+               </p>
+               <span>EMMA DOE,<span id="inner-span"> company CEO</span></span>
+            </div>
+            <div class="slide">
+                <img src="img/person-1.jpg" alt="">
+                <p> this project Lorem ipsum dolor sit amet consectetur adipisicing elm dolor amet consectetur dipisicing em dolor sit amet consectetur adipisi adipi cing adipi onsectetur adipi sicingonse ctetur adipisicing eit eit.  
+                </p>
+                <span>TOM FORD,<span id="inner-span"> Administrator</span></span>
+            </div>
+            <div class="slide">
+                <img src="img/person-3.jpg" alt="">
+                <p> this project Lorem ipsum dolor sit amet consectetur adipisicing elm dolor sit amet consectetur           adipisicing em dolor sit amet consectetur adipisi adipi cing adipi onsectetur adipi sicingonse ctetur adipisicing eit eit eit. Tempore, perferendis.  
+                </p>
+                <span>MARITA STEWART,<span id="inner-span"> VP Sales and Marketing</span></span>
+            </div>
+        </div>
+
+        <div class="people-slide-index">
+            <div class="indexs indexOn"></div>
+            <div class="indexs "></div>
+            <div class="indexs "></div>
+        </div>
+    </div>
+
+    <div class="our-skills">
+        <h1 class="skills-header">SKILLS & EXPERTISE</h1>
+
+        <div class="skills-wrapper">
+            <div class="skills-text">
+                <h3>TO MEET <span style="color: #da5c48;">TODAY'S CHALLENGES,</span> WE'VE CREATED A UNIQUE, MORE PERSONAL APPROACH TO INVESTING.</h3>
+                <p>With a community of over 400 million users (and a majority age group being 18 to 29), wouldn’t you want to make sure you’re monitoring what people are posting on social networks? Especially if the demographic of your audience falls in that age range.</p>
+            </div>
+            <div class="skills-diagram">
+                <img src="img/analysis.jpg" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    Our app  -  section 5 --->
+<section id="our-app">
+    <div class="app-wrapper">
+        <div class="phone">
+            <img src="img/iphone-5-1.png" alt="">
+        </div>
+        <div class="app-text">
+            <span>DOWNLOAD OUR APP</span>
+            <h1>SMALL SCREEN. BIG IDEAS</h1>
+            <p>With a community of over 400 million users (and a majority age group being 18 to 29), wouldn’t you want to make sure you’re monitoring what people are posting on social networks?  
+            </p>
+            <a href="about.html"><button class="btn-one">LEARN MORE</button></a>
+            <button class="btn-two">DOWNLOAD APP</button>
+        </div>
+    </div>
+</section>
+
+<!--    Our Stuff  -  section 6 --->
+<section id="our-stuff">
+        <h1>MEET OUR STUFF</h1>
+        <div class="stuff-top-wrap">
+            <div class="text-left">
+                <h3>TO MEET <span style="color: #da5c48;">TODAY'S CHALLENGES,</span> WE'VE CREATED A UNIQUE, MORE PERSONAL APPROACH TO INVESTING.</h3>
+            </div>
+            <div class="text-right">
+                <p>With a community of over 400 million users (and a majority age group being 18 to 29), wouldn’t you want to make sure you’re monitoring what people are posting on social networks? Especially if the demographic of your audience falls in that age range.</p>
+            </div>
+        </div>
+        <div class="stuff-profiles">
+            <figure class="stuff-figure">
+                <img src="img/stuff-1.jpg" alt="" style="width:100%">
+                <figcaption>
+                    <div class="fig-content">
+                        <h2>SARAH JOHNSON</h2>
+                        <span>CEO, OWNER</span>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="stuff-figure">
+                <img src="img/stuff-2.png" alt="" style="width:100%">
+                <figcaption>
+                    <div class="fig-content">
+                        <h2>SARAH JOHNSON</h2>
+                        <span>CEO, OWNER</span>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="stuff-figure">
+                <img src="img/stuff-3.jpg" alt="" style="width:100%">
+                <figcaption>
+                    <div class="fig-content">
+                        <h2>SARAH JOHNSON</h2>
+                        <span>CEO, OWNER</span>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="stuff-figure">
+                <img src="img/stuff-4.jpg" alt="" style="width:100%">
+                <figcaption>
+                    <div class="fig-content">
+                        <h2>SARAH JOHNSON</h2>
+                        <span>CEO, OWNER</span>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+</section>
+
+<!--    contact  -  section 7 --->
+<section id="contact">
+    <div class="contact-info-wrap">
+        <div class="info">
+            <i class="fa fa-mobile fa-4x"></i>
+           <div class="info-aside">
+                <span>CALL TODAY</span>  <br>
+                <a href="">+800 <strong>123 45 67</strong></a>
+           </div>
+        </div>
+        <div class="info">
+            <i class="fa fa-fax fa-2x"></i>
+            <div class="info-aside">
+                <span>FAX US</span>  <br>
+                <a href="#">+800<strong>123 45 67</strong></a>
+            </div>
+        </div>
+        <div class="info">
+             <i class="fa fa-at fa-3x"></i>
+            <div class="info-aside">
+                <span id="mobile">EMAIL US</span> <br>
+                <a href=""><strong>info@imperion.com</strong></a>
+        </div>
+        </div>
+    </div>
+    <div class="map">
+        <iframe width="600" height="500" id="gmap_canvas" src="https://www.google.com/maps/d/embed?mid=1IvDWVj2-9uSXhB93vifJaNsu_Js&hl=en" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </div>
+</section>
+
+ <!--   footer     --->
+ <footer id="footer">
+     <div class="footer-content">
+         <div class="content-col">
+             <h4>LATEST POSTS</h4>
+             <a href="#">Yes studio: from Paris with love.</a>
+             <span>July 18, 2019</span>
+             <a href="#">Inside report from the studio show.</a>
+             <span>July 18, 2019</span>
+             <a href="#">Top 10 spring trends and how you wear them.</a>
+             <span>July 18, 2019</span>
+         </div>
+         <div class="content-col">
+                <h4>HEAD OFFICE</h4>
+                <span>4096 N Highland St, Arlington VA 32101,<br> USA</span>
+                <a href="#" style="color:#da5c48; margin: 20px 0 0;">imperion@demolink.org</a>
+                <a href="#" style="color:#da5c48; margin: 20px 0 ;">+800 1234 56 78</a>
+                <span >Mon-Fri: 9:30 – 21:00</span>
+                <span >Sat: 10:00 – 15:00</span>
+         </div>
+         <div class="content-col">
+                <h4>QUICK LINKS</h4>
+                <a href="index.html" style="color:#da5c48;">home</a>
+                <a href="projects.html">Project</a>
+                <a href="news.html">News</a>
+                <a href="about.html" >About us</a>
+         </div>
+         <div class="content-col">
+            <h4>NEWSLETTER</h4>
+            <div class="footer-input">
+                <input type="text" placeholder="Your Email Address">
+                <a href="#"> <i class="fa fa-envelope fa-2x"></i></a>
+            </div>
+            <div class="footer-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+                <a href="https://twitter.com"  target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
+                <a href="https://linkedin.com"  target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
+            </div>
+         </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <a href=""><img src="https://ld-wp.template-help.com/wordpress_imperion/presentation_v1/wp-content/themes/imperion/skins/presentation/assets/images/invert-logo.png" alt="Imperion" class="site-link__img"></a>
+            <p>&copy; 2019 L.N. All Rights Reserved.</p>
+        </div>
+    </div>
+ </footer>
+
+ 
+
+
+<script src="js/general.js"></script> 
+<script src="js/index.js"></script> 
+     
+</body>
+</html>
