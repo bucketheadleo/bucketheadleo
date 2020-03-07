@@ -213,12 +213,19 @@ body {
     width: 100%;
     margin-bottom: 20px;
 }
-.page-content .projects-wrapper .col .portfolio-item-link:hover  .portfolio-item .item-description  {
+.page-content .projects-wrapper .col .portfolio-item-link:hover  .portfolio-item .item-description {
     opacity: 1;
+}
+.page-content .projects-wrapper .col .portfolio-item-link:hover  .portfolio-item .item-img {
+    transform: scale(1.15);
 }
 .page-content .projects-wrapper .col .portfolio-item-link .portfolio-item {
     position: relative;
     height: auto;
+    overflow: hidden;
+}
+.page-content .projects-wrapper .col .portfolio-item-link .portfolio-item .item-img {
+    transition: transform .75s ease-in-out;
 }
 .page-content .projects-wrapper .col .portfolio-item-link .portfolio-item .item-description {
     position: absolute;
@@ -226,7 +233,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(122, 20, 218, 0.87);
+    background-color: rgba(107, 20, 189, 0.78);
     display: flex;
     justify-content: center;
     align-items: center;
