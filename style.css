@@ -38,6 +38,10 @@ body {
     animation: none !important;
     transition: none !important;
 }
+.prevent-body-scroll {
+    position: fixed;
+    width: 100%;
+}
 
 /* --- site here ---  */
 
@@ -391,6 +395,13 @@ body {
         font-size: 24px;
     }
 
+}
+
+@media only screen and (min-width: 1060px) {  /* enable bodyscroll if menu is open on small screen */
+    .prevent-body-scroll {
+        position: relative;
+        width: 100%;
+    }
 }
 
 @media only screen and (max-width: 1060px) {

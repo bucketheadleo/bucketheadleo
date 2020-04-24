@@ -16,12 +16,8 @@ function toggleMenu() {
     menu.classList.toggle('show');
     menu.style.transition = "0.5s ease-in-out"
     menuBtn.classList.toggle('switch');
+    
+    document.body.classList.toggle('prevent-body-scroll');
 };
 
-// const navLink = document.querySelectorAll('.menu-item-link');
 
-// for(let char of navLink) {
-//     char.addEventListener("click", function(){
-//         console.log("sdsd")
-//     })
-// }
