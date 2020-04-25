@@ -42,7 +42,9 @@ body {
 #authors .fab {
 	color: #fff;
 }
-
+.card {
+	cursor: pointer;
+}
 
 
 @media(max-width:768px) {
