@@ -360,9 +360,11 @@ body {
     font-family: 'Lato', sans-serif;
     cursor: pointer;
 }
+#header .nav .collection-panel .wrapper .content .collection-list .collection-item .description span {
+    transition: .5s;
+}
 #header .nav .collection-panel .wrapper .content .collection-list .collection-item .description:hover span {
     font-size: 103%;
-    transition: .5s;
 }
 #header .nav .collection-panel .wrapper .content .collection-list .collection-item .description a{
     font-size: 12px;
