@@ -244,12 +244,12 @@ body {
     box-sizing: border-box;
 }
 .page-content .projects-wrapper .col {
-    width: 50%;
     margin: 0 10px;
     display: flex;
     flex-direction: column;
-
 }
+
+
 .page-content .projects-wrapper .col .portfolio-item-link {
     width: 100%;
     margin-bottom: 22px;
@@ -473,6 +473,16 @@ body {
     }
 }
 
+/* project layout */
+@media only screen and (max-width: 720px) {
+    .page-content .projects-wrapper {
+        flex-wrap: wrap;
+    }
+    .page-content .projects-wrapper .col {
+        width: 100%
+    }
+}
+
 
 @media only screen and (max-width: 700px) {
 
@@ -505,14 +515,24 @@ body {
 
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
 
     .header .content .header-title {
         font-size: 24px;
+        margin: 0;
+    }
+    .header .content .header-des {
+        margin-top: 10px;
     }
     .header .content .menu-icon {
         right: 20px;
+        top: 35px;
     }
+    .header .content .navigation .menu-item .menu-item-link {
+        font-size: 16px;
+    }
+
+
     .page-content .projects-wrapper .col .portfolio-item-link .portfolio-item .item-description .description p {
         font-size: 11px;
     }
@@ -522,5 +542,10 @@ body {
     .contact .content {
         padding: 0px;
     }
+    .header .content {
+        padding: 30px 20px;
+    }
+    
+    
 
 }
