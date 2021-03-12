@@ -1,0 +1,143 @@
+/* ____ footer _____*/
+.footer {
+    padding: 0 0 100px;
+    @include mediaMax(950px) {
+        padding: 0 0 45px;
+    }
+
+    &__top {
+        border-top: 1px solid #DFE6E9;
+        padding: 20px 0;
+        ul {
+            width: 100%;
+            li {
+               margin-bottom: 3px;
+                sup {
+                    color: #1A1A1A;
+                    margin-right: 5px;
+                    font-size: 10px;
+                }
+                color: #757F83;
+                font-size: 11px;
+            }
+        }
+
+        &-help {
+            background-color: $primary;
+            border-radius: 8px;
+            color: #fff;
+            margin-top: 30px;
+            transition: .5s;
+            &:hover {
+                box-shadow: inset 0 0 4px rgba( #fff, .5),
+                0 2px 7px rgba(17, 17, 17, 0.21);
+            }
+
+            @include mediaMax(700px) {
+                margin-top: 20px;
+            }
+
+            a {
+                line-height: 58px;
+                width: 100%;
+                justify-content: center;
+                transition: .4s;
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                @include mediaMax(700px) {
+                    line-height: 48px;
+                }
+
+                .icon {
+                    fill: #fff;
+                    width: 20px;
+                    height: auto;
+                    margin-right: 5px;
+                }
+
+                b {
+                    font-weight: bold;
+                    margin-left: 5px;
+                }
+
+                span {
+                    @include w-h(22px);
+                    background-color: #fff;
+                    border-radius: 4px;
+                    margin-left: 8px;
+                    transition: .5s;
+                    img {
+                        width: 5px;
+                        height: auto;
+                   
+                    }
+
+                }
+                &:hover  span{
+                    margin-left: 15px;
+                   box-shadow:  0 0px 4px rgba( #111, .15);
+                }
+                @include mediaMax(700px) {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+
+    &__main {
+        border-top: 1px solid #DFE6E9;
+        padding-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        color: #2D3436;
+        
+        &-title {
+            font-size: 12px;
+            font-weight: 500;
+            margin-bottom: 8px;
+        }
+
+        ul {
+            a {
+                display: block;
+                font-size: 12px;
+                font-weight: 400;
+                margin-bottom: 5px;
+                transition: .5s;
+                &:hoveR {
+                    color: $primary;
+                }
+            }
+        }
+
+        .api {
+            background-color: #222;
+            width: 100%;
+            min-height: 186px;
+        }
+        .api-col {
+            width: 460px;
+        }
+
+        @include mediaMax(950px) {
+            .col {
+                min-width: 33%;
+                margin-bottom: 20px;
+            }
+            .api-col {
+                width: 65%;
+            }
+        } 
+        @include mediaMax(650px)  {
+            .col {
+                min-width: 48%;
+                margin-bottom: 20px;
+            }
+            .api-col {
+                width: 100%;
+            }
+        }
+    }
+}

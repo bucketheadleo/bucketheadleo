@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="434px" height="392px" viewBox="0 0 434 392" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: sketchtool 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>6170210C-13DC-4C2C-AE82-88D4CD07149E</title>
+    <desc>Created with sketchtool.</desc>
+    <defs>
+        <path d="M10.7487734,14.6237734 L14.7928932,18.6678932 C15.1834175,19.0584175 15.8165825,19.0584175 16.2071068,18.6678932 L20.2512266,14.6237734 C20.6417508,14.2332492 20.6417508,13.6000842 20.2512266,13.2095599 C20.0636902,13.0220235 19.8093363,12.9166667 19.5441198,12.9166667 L11.4558802,12.9166667 C10.9035955,12.9166667 10.4558802,13.3643819 10.4558802,13.9166667 C10.4558802,14.1818832 10.5612371,14.4362371 10.7487734,14.6237734 Z" id="path-1"></path>
+        <path d="M10.7487734,14.6237734 L14.7928932,18.6678932 C15.1834175,19.0584175 15.8165825,19.0584175 16.2071068,18.6678932 L20.2512266,14.6237734 C20.6417508,14.2332492 20.6417508,13.6000842 20.2512266,13.2095599 C20.0636902,13.0220235 19.8093363,12.9166667 19.5441198,12.9166667 L11.4558802,12.9166667 C10.9035955,12.9166667 10.4558802,13.3643819 10.4558802,13.9166667 C10.4558802,14.1818832 10.5612371,14.4362371 10.7487734,14.6237734 Z" id="path-3"></path>
+        <path d="M10.7487734,14.6237734 L14.7928932,18.6678932 C15.1834175,19.0584175 15.8165825,19.0584175 16.2071068,18.6678932 L20.2512266,14.6237734 C20.6417508,14.2332492 20.6417508,13.6000842 20.2512266,13.2095599 C20.0636902,13.0220235 19.8093363,12.9166667 19.5441198,12.9166667 L11.4558802,12.9166667 C10.9035955,12.9166667 10.4558802,13.3643819 10.4558802,13.9166667 C10.4558802,14.1818832 10.5612371,14.4362371 10.7487734,14.6237734 Z" id="path-5"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.300000012">
+        <g id="Page-3:-Marketing-Affiliate-Program" transform="translate(-299.000000, -565.000000)">
+            <g id="1" transform="translate(0.000000, 168.000000)">
+                <g id="Group-14" transform="translate(136.000000, 320.000000)">
+                    <g id="Group-16">
+                        <g id="Group-15" transform="translate(53.000000, 0.000000)">
+                            <g id="arrows" transform="translate(110.000000, 59.000000)">
+                                <path d="M328,406.134813 C365.090236,389.960842 409.527668,343.667408 430.472937,304.758758 M410.126998,104.845937 C402,88 387.779167,66.5268268 372,52 C353.885829,35.3234903 331.297703,24 312.017708,19 M97,23.2686506 C64.5849352,39.574766 27,70.7337347 0.844693676,118.198819" id="Oval-2" stroke="#8B8EA8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <g id="Atoms-/-icons-/-System-/-Dropdown" transform="translate(98.992947, 21.992947) rotate(241.000000) translate(-98.992947, -21.992947) translate(83.266535, 6.266535)">
+                                    <mask id="mask-2" fill="white">
+                                        <use xlink:href="#path-1"></use>
+                                    </mask>
+                                    <use id="Mask" fill="#C2D1D9" fill-rule="evenodd" xlink:href="#path-1"></use>
+                                    <g id="Atoms-/-Colors-/-Gray-#2" mask="url(#mask-2)" fill="#8B8EA8" fill-rule="evenodd">
+                                        <rect id="Atoms-/-Colors-/-Black" x="0" y="0" width="31" height="31"></rect>
+                                    </g>
+                                </g>
+                                <g id="Atoms-/-icons-/-System-/-Dropdown" transform="translate(329.028811, 406.028811) rotate(64.000000) translate(-329.028811, -406.028811) translate(313.302399, 390.302399)">
+                                    <mask id="mask-4" fill="white">
+                                        <use xlink:href="#path-3"></use>
+                                    </mask>
+                                    <use id="Mask" fill="#C2D1D9" fill-rule="evenodd" xlink:href="#path-3"></use>
+                                    <g id="Atoms-/-Colors-/-Gray-#2" mask="url(#mask-4)" fill="#8B8EA8" fill-rule="evenodd">
+                                        <rect id="Atoms-/-Colors-/-Black" x="0" y="0" width="31" height="31"></rect>
+                                    </g>
+                                </g>
+                                <g id="Atoms-/-icons-/-System-/-Dropdown" transform="translate(429.579868, 141.579868) rotate(340.000000) translate(-429.579868, -141.579868) translate(413.853455, 125.853455)">
+                                    <mask id="mask-6" fill="white">
+                                        <use xlink:href="#path-5"></use>
+                                    </mask>
+                                    <use id="Mask" fill="#C2D1D9" fill-rule="evenodd" xlink:href="#path-5"></use>
+                                    <g id="Atoms-/-Colors-/-Gray-#2" mask="url(#mask-6)" fill="#8B8EA8" fill-rule="evenodd">
+                                        <rect id="Atoms-/-Colors-/-Black" x="0" y="0" width="31" height="31"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

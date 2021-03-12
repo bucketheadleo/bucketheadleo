@@ -1,0 +1,53 @@
+// statistics-section
+.statistic-section {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #1A1A1A;
+    @include mediaMax(700px) {
+        display: block;
+    }
+
+    &__card {
+        width: 30%;
+        max-width: 325px;
+        @include mediaMax(700px) {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            &:not(:last-of-type) {
+                margin-bottom: 25px
+            }
+        }
+
+        span {
+            @include w-h(82px);
+            border-radius: 50%;
+            background-color: #E4F4E7;
+            margin-bottom: 10px;
+            img {
+                max-height: 30px;
+                max-width: 29px;
+            }
+            @include mediaMax(850px) {
+                @include w-h(72px);
+            }
+            @include mediaMax(700px) {
+                @include w-h(65px);
+                margin: 0 auto 10px;
+            }
+        }
+        h2 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            @include mediaMax(700px) {
+                font-size: 16px;
+            }
+        }
+        p {
+            color: #2D3436;
+            font-size: 12px;
+        }
+    }
+}

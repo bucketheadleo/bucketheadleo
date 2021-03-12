@@ -1,0 +1,74 @@
+
+// language box
+
+.language-box {
+    color: #757F83;
+    position: relative;
+    //padding-right: 14px;
+    cursor: pointer;
+    
+    &::after {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: 5px;
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        border-right: 6px solid #fff;
+        transition: .4s;
+        transform: rotate(-90deg);
+    }
+    &:hover::after {
+        transform: rotate(90deg);
+    }
+    &:hover &__menu {
+        transform: scaleY(1);
+    }
+
+    &__selected {
+        padding: 4px 8px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+
+    &__menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 100%; // wdith of lang-box
+        background-color: rgba(35, 36, 35, 1);
+        transition: .4s;
+        transform: scaleY(0);
+        transform-origin: top;
+        max-height: 90px; // height of all shown elements together ( n * x  a.height)
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 3px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color:rgb(153, 153, 153); 
+            box-shadow: none;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: rgb(68, 209, 115); 
+            border-radius: 0px;
+        }
+
+        a {
+            display: block;
+            min-width: max-content;
+            width: 100%;
+            padding: 5px 5px;
+            font-size: 16px;
+            font-weight: 500;
+            color: #868c8f;
+            &:hover {
+                background-color: rgba(247, 247, 247, 0.664);
+            }
+        }
+    }
+}

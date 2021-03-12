@@ -1,0 +1,43 @@
+/* ____ footer _____*/
+
+.footer {
+    color: #fff;
+
+    &__top {
+        background-color: #4282D6;
+        padding: 25px 0;
+
+        .container  {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .col {
+            margin-right: 120px;
+            @include mediaMax(750px) {
+                width: 100%;
+                &:not(:last-of-type) {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+        h2 {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        p {
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+    }
+    &__bottom {
+        background-color: #2C5EA1;
+        padding: 30px 0 32px;
+
+        p {
+            font-size: 12px;
+        }
+
+    }
+}

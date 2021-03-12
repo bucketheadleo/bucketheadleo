@@ -1,0 +1,19 @@
+// placeholders dont compile intil used. styles  elements together , where its used 
+// .class, #el, .title {  @extend flex-center; }
+// Flex-boxes
+%mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%mixin flex-between-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+
+
+

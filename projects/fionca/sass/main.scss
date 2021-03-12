@@ -1,0 +1,38 @@
+// group partials ---  order + ---
+
+// 1- abstracts (helpers - utility)
+@import "abstracts/variables";
+@import "abstracts/helpers";
+@import "abstracts/functions";
+@import "abstracts/mixins";
+@import "abstracts/placeholders";
+
+
+// 2- Base  
+@import "base/base-reset";
+@import "base/typography";
+@import "base/animations";
+
+// 3- Components 
+@import "components/language-box";
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+
+
+
+// 4- Layout 
+@import "layout/header";
+@import "layout/contact";
+@import "layout/video-section";
+@import "layout/footer";
+
+// 5- Page 
+@import "pages/home";
+@import "pages/other-pages";
+
+
+// 6- vendor ( third party stuff) 
+@import "./vendor/slick";
+
+// 7 themes

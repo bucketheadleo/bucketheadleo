@@ -1,0 +1,309 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    /* height: 100%; */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    /* height: auto; */
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+
+/* remove Outline - select slide name */
+.slick-slide {
+    outline: none;
+    cursor: pointer;
+}
+
+                    /* ------- custom slider parameters here*/
+
+/* add space the slides  slider = .news-blog__slider */
+.news-blog__slider .slick-slide {
+    margin: 0 20px;
+}
+
+
+                    /* ------- end of  custom slider parameters here*/
+
+
+
+/* custom arrows */ /* for .here */
+
+.here .slick-arrow {
+    position: absolute;
+    top: 50%;
+    z-index: 4;
+    background: transparent;
+    border: none;
+    color: blue;
+    outline: none;
+    text-indent: -9999px; 
+    white-space: nowrap;  
+    border-radius: 50%;
+    transform: translateY(-50%);
+    transition: .3s;
+}
+
+.here .slick-prev {
+    left: -35px;
+    background: url('../img/icons/arr-left-svg.svg')  50% 50% / 100% no-repeat; 
+    width: 30px;
+    height: 30px;
+}
+.here .slick-next {
+    right: -35px;
+    background: url('../img/icons/arr-right-svg.svg')  50% 50% / 100% no-repeat; 
+    width: 30px;
+    height: 30px;
+  
+}
+.news-blog__slider .slick-arrow:hover {
+    transform: translateY(-50%) scale(1.08);
+    box-shadow: 0 6px 3px rgba(26, 25, 25, 0.2);
+    background-color: #CE2327;
+}
+
+
+
+
+
+/* custom dots --------------- */
+
+ul {list-style: none;}
+
+.slider {
+    position: relative;
+}
+.hero__slider .slick-dots {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* style with slider class*/
+.hero__slider .slick-dots li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero__slider .slick-dots button {
+    font-size: 0;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin: 0 3px;
+    box-sizing: content-box;
+    transition: .4s;
+    border: 2px solid #fff;
+}
+.hero__slider .slick-dots .slick-active button{
+    background-color: rgba(255, 255, 255, 0.46);
+}
+
+@media (max-width: 600px) {
+    .hero__slider .slick-dots button {
+        width: 14px;
+        height: 14px;
+    }
+}
+
+
+/* current slide -- hero */
+
+/* target current slide - .slick-current -  */ 
+.hero__slider .slick-current .hero__slider-slide-content {
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+
+
+
+/*  --  edu cards -- */
+
+.education-cards__wrap .slick-slide{
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+    cursor: default ;
+}
+
+
+/* arrows */
+
+.education-cards__wrap .slick-dots {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+    height: auto;
+    min-width: 280px;
+    background-color: #fff;
+    padding: 6px 18px;
+}
+
+.education-cards__wrap .slick-dots button {
+    font-size: 12px;
+    width: 24px;
+    height: 24px;
+    font-family: 'Roboto', sans-serif;
+    background: transparent;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin: 0 6px;
+    box-sizing: content-box;
+    transition: .4s;
+    border: 1px solid transparent;
+    color: #979797;
+    min-width: max-content;
+}
+.education-cards__wrap .slick-dots button:hover {
+    border: 1px solid  #c5c5c5;;
+}
+
+.education-cards__wrap .slick-dots .slick-active button{
+    background-color: #FF701A;
+    color: #fff;
+}
+
+
+@media (max-width: 900px) {
+    .education-cards__wrap .slick-dots {
+        top: -20px;
+        border: 1px solid lightgray;
+        border-radius: 13px;
+        padding: 5px 7px;
+    }
+}
+
+
+/* edu cards buttons = in css file */
+
+/* current slide animate */
+.education-cards__wrap  .slick-current .education-card__content {
+    transform: translateY(0%);
+    opacity: 1;
+}

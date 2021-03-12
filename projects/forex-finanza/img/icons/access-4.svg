@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="48px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/instruments/commodities</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon/instruments/commodities" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/instruments/" fill="#FF701A" fill-rule="nonzero">
+            <g id="Group-6" transform="translate(6.000000, 6.000000)">
+                <path d="M10.2727273,20 C6.21790472,20 3,16.6489982 3,12.2222222 L3,7 C3,6.44771525 3.44771525,6 4,6 L11.7272727,6 C15.7823555,6 19,9.35100184 19,13.7777778 L19,20 L10.2727273,20 Z M10.4545455,18 L17,18 L17,13.5555556 C17,10.3935727 14.5867666,8 11.5454545,8 L6,8 C5.44771525,8 5,8.44771525 5,9 L5,12.4444444 C5,15.6064273 7.41342854,18 10.4545455,18 Z" id="Combined-Shape" opacity="0.5"></path>
+                <path d="M19,13 L19,30 L17,30 L17,8 L17,5.77777778 C17.0002765,2.29920213 19.3910419,0 23,0 L28,4.4408921e-16 C28.5522847,3.42636147e-16 29,0.44771525 29,1 L29,7.22222222 C29,10.7007979 26.6092346,13 23,13 L19,13 Z M19,6 L19,10 L19,11 L23,11 C25.4061564,11 27,9.40824468 27,7 L27,3 C27,2.44771525 26.5522847,2 26,2 L23,2 C20.5940279,2 19.0001843,3.59175532 19,6 Z" id="Combined-Shape"></path>
+                <path d="M4.47444195,34 L31.5255581,34 C26.9959847,31.9959142 22.4912397,31 18,31 C13.5087603,31 9.00401529,31.9959142 4.47444195,34 Z M0,34 C6,30.6666667 12,29 18,29 C24,29 30,30.6666667 36,34 C36,34 36,34.6666667 36,36 L0,36 L0,34 Z" id="Rectangle-4"></path>
+            </g>
+        </g>
+    </g>
+</svg>

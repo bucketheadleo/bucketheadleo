@@ -1,0 +1,365 @@
+/* ____ header _____*/
+.header {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    z-index: 110;
+    animation: move-up 1s;
+
+    @include mediaMax( 1000px) {
+        top: 20px;
+        animation: move-up 0s;
+    } 
+    @include mediaMax( 650px) {
+        top: 5px;
+    } 
+
+    &.fixed {
+        background-color: rgba( #fff, .95);
+        position: fixed;
+        top: 0px;
+        animation: move-down 1s;
+        box-shadow: 0 0 5px rgba(0,0,0, .2);
+        @include mediaMax( 1000px) {
+            animation: move-down .8s;
+        }
+        nav .container {
+            align-items: center;
+            .brand-logo {
+                margin: 10px 0;
+                img {
+                    height: 50px;
+                    @include mediaMax( 650px)  {
+                        height: 46px;
+                    }
+                }
+            }
+        }
+    }
+    .nav {
+        
+        .container {
+            display: flex;
+            align-items: flex-end;
+        }
+
+        &__main {
+            display: flex;
+            align-items: center;
+            flex: 1;
+        }
+        .brand-logo {
+            margin-bottom: 12px;
+        }
+        .brand-logo img{
+            height: 68px;
+            width: auto;
+            display: block;
+        }
+        @include mediaMax( 650px) {
+            .container {
+                align-items: center;
+                .brand-logo {
+                    margin: 10px 0;
+                    img {
+                        height: 46px;
+                    }
+                }
+            }
+        }
+
+
+        .menu-icon {
+            width: 20px;
+            height: auto;
+            display: none;
+    
+            svg {
+                fill: #111;
+            }
+            @include mediaMax( 1000px) {
+                display: block;
+                margin-left: auto;
+            }
+        }
+
+        .navigation-sm {
+            @include mediaMax( 1000px) {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100vh;
+                z-index: 1000;
+                background-color: rgba( $primary, .95);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                visibility: hidden;
+                opacity: 0;
+                transition: .6s;
+
+                &.shown {
+                    visibility: visible;
+                    opacity: 1;
+                }
+                &::after {
+                    content: "×";
+                    position: absolute;
+                    top: 30px;
+                    right: 30px;
+                    background-color: #fff;
+                    color: rgb(146, 65, 28);
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    font-size: 26px;
+                    border-radius: 50%;
+                    text-align: center;
+                    cursor: pointer;
+                }
+            }
+        }
+        .navigation {
+            display: flex;
+            margin-left: 50px;
+            @include mediaMax( 1000px) {
+                margin: 10px 10px 10px 30px;
+                flex-direction: column;
+            }
+
+
+            .auth {
+                display: none;
+                @include mediaMax( 1000px) {
+                    display: flex;
+                    margin-bottom: 5px;
+                    a {
+                        padding: 0 10px;
+                        background-color: #fff;
+                        color: $primary;
+                        line-height: 30px;
+                        width: max-content;
+                        margin-right: 10px;
+                        border-radius: 5px;
+                        font-size: 13px;
+                    }
+                }
+            }
+            &__item {
+                margin-left: 35px;
+                line-height: 60px;
+                position: relative;
+                cursor: pointer;
+                &:hover .sub-menu {
+                    transform: scale(1);
+                    @include mediaMax( 1000px) {
+                        max-height: 500px;
+                        padding: 12px 0;
+                        transition: .9s;
+                    }
+                }
+                @include mediaMax( 1000px) {
+                    margin-left: 0;
+                    line-height: 30px;
+                }
+
+            }
+            .sub-menu {
+                position: absolute;
+                top: 100%;
+                background-color: #fff;
+                display: flex;
+                box-shadow: 0 0 14px rgba(0,0,0, .06);
+                padding: 12px 0;
+                border-radius:3px;
+                transform: scale(0);
+                transform-origin: top left;
+                transition: .3s;
+
+                ul {
+                    width: max-content;
+                    padding: 0 16px;
+                
+                    &:not(:first-of-type){
+                        border-left: 1px solid #DFE6E9;
+                    }
+                    h3 {
+                        font-size: 14px;
+                        line-height: 1.3;
+                        margin-bottom: 10px;
+                        color: #CFCFCF;
+                        font-size: 12px;
+                        text-transform: capitalize;
+                    }
+                    a {
+                        display: block;
+                        line-height: 1.2;
+                        color: #1A1A1A;
+                        font-size: 12px;
+                        transition: .4s;
+                        text-transform: capitalize;
+                        &:not(:last-of-type) {
+                            margin-bottom: 10px;
+                        }
+                        &:hover {
+                            color: $primary;
+                        }
+                    }
+                }
+                @include mediaMax( 1000px) {
+                    position: static;
+                    transform: scale(1);
+                    max-height: 0;
+                    padding:  0;
+                    overflow: hidden;
+                    transition: .3s;
+                    ul a {
+                        font-size: 13px;
+                    }
+                }
+            }
+            &__link {
+                color: #757F83;
+                font-size: 14px;
+                transition: .5s;
+               
+                //color: set-color(black);
+                &:hover {
+                    color: $primary;
+                }
+                @include mediaMax( 1000px)  {
+                    color: #fff;
+                    font-size: 15px;
+                    &:hover {
+                        color: #111;
+                    }
+                    &:not([href=""]) {
+                       position: relative;
+                       &::after {
+                           content: "";
+                           position: absolute;
+                           top: 50%;
+                           transform: translateY(-50%);
+                           right: -15px;
+                           width: 0; 
+                           height: 0;
+                           border-top: 5px solid rgba(255, 255, 255, 0.664);
+                           border-right: 4px solid transparent;
+                           border-left: 4px solid transparent;
+                       }
+                    }
+                }
+            }
+        }
+
+        &__right {
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+
+        &__signin {
+            margin: 0 32px 0 42px;
+            height: 60px;
+            position: relative;
+            user-select: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @include mediaMax( 650px) {
+                display: none;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 13px;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $primary;
+                transition: .6s;
+                transform: scaleX(0);
+            }
+            &:hover::after {
+                transform: scaleX(1);
+            }
+            &:hover .nav__signin-dropdown {
+                transform: scaleY(1) translateX(-50%);
+            }
+            p {
+                color: $text-gray;
+                font-weight: normal;
+                font-size: 12px;
+            }
+            h3 {
+                font-size: 16px;
+                font-family: 500;
+                color: $primary;
+            }
+            &-dropdown {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: scaleY(0) translateX(-50%);
+                transform-origin: top;
+                transition: .4s;
+                width: 155px;
+                padding: 9px;
+                border-radius: 8px;
+                background-color: #fff;
+                box-shadow:  0 1px 8px rgba(0,0,0, .1);
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 0; 
+                    height: 0; 
+                    border-left: 7px solid transparent;
+                    border-right: 7px solid transparent;
+                    border-bottom: 11px solid #fff;
+                    
+                }
+                .signin {
+                    background-color: $primary;
+                    display: block;
+                    border-radius: 4px;
+                    line-height: 30px;
+                    font-size: 12px;
+                    color: #fff;
+                    text-align: center;
+                    margin-bottom: 5px;
+                }
+                span {
+                    color: #cfd4d6;
+                    font-size: 10px;
+                }
+                .register {
+                    color: $primary;
+                    font-size: 10px;
+                    margin-left: 4px;
+                    text-decoration: underline;
+                    &:hover {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+
+        &__register {
+            background-color: $primary;
+            line-height: 42px;
+            padding: 0 30px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            @include mediaMax( 650px) {
+                display: none;
+            }
+        }
+    }
+
+}

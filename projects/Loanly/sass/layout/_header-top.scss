@@ -1,0 +1,48 @@
+// top info panel ---
+.header-top {
+    position: fixed;
+    z-index: 110;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(#000000 ,0.38);
+    color: #fff;
+    border-bottom: 1px solid #fff;
+
+    &.bg-dark {
+        background-color: rgba( #000, .75);
+    }
+
+    .header-top__content {
+        height: 54px;
+        display: flex;
+        align-items: center;
+
+        &-addres {
+            margin-left: 25px;
+            font-size: 12px;
+            font-weight: $font-light;
+            &:hover {
+                text-decoration: underline;
+            }
+            @include mediaMax(600px) {
+                display: none;
+            }
+        }
+        &-link {
+            margin-left: auto;
+            font-size: 12px;
+            transition: .4s;
+            svg {
+                fill: #fff;
+                transition: .4s;
+                margin-right: 5px;
+            }
+            &:hover {
+                svg {
+                    fill: $primary;
+                }
+            }
+        }
+    }
+}

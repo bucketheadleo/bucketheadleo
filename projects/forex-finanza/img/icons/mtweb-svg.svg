@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="64px" viewBox="0 0 64 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.4 (67378) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/mt web</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="64" height="64"></rect>
+    </defs>
+    <g id="icon/mt-web" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <g id="Background"></g>
+        <rect id="Rectangle" stroke="#2585FF" stroke-width="2" fill="#FFFFFF" mask="url(#mask-2)" x="3" y="8" width="58" height="49" rx="2"></rect>
+        <path d="M6,7 L58,7 C60.209139,7 62,8.790861 62,11 L62,19 L2,19 L2,11 C2,8.790861 3.790861,7 6,7 Z" id="Rectangle" fill="#2585FF" mask="url(#mask-2)"></path>
+        <circle id="Oval" fill="#FFFFFF" mask="url(#mask-2)" cx="9" cy="13" r="3"></circle>
+        <circle id="Oval-Copy" fill="#FFFFFF" mask="url(#mask-2)" cx="17" cy="13" r="3"></circle>
+        <circle id="Oval-Copy-2" fill="#FFFFFF" mask="url(#mask-2)" cx="25" cy="13" r="3"></circle>
+        <g id="Cursor-/-Default" mask="url(#mask-2)" fill="#2585FF" stroke="#FFFFFF" stroke-opacity="0.8" stroke-width="1.39999998">
+            <g transform="translate(30.000000, 30.208333)" id="Rectangle-237">
+                <path d="M9.78633698,9.63062973 L14.0738344,15.4531618 L10.9869033,18.0120696 L6.71469576,12.2103016 L2.67529663,18.6695339 L-3.08011831,-4.44045248 L16.6227554,7.05276559 L9.78633698,9.63062973 Z"></path>
+            </g>
+        </g>
+    </g>
+</svg>

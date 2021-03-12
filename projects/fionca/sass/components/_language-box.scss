@@ -1,0 +1,95 @@
+
+// language box
+
+.language-box {
+    margin-left: 10px;
+
+    color: #fff;
+    position: relative;
+    padding-right: 10px;
+    cursor: pointer;
+    
+    &::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        right: 0px;
+        width: 9px;
+        height: 5px;
+        background-image: url('../img/icons/chevron-down-svg.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        transition: .4s;
+        transform: rotate(0deg);
+    }
+    &:hover::after {
+        transform: rotate(180deg);
+    }
+    &:hover &__menu {
+        transform: scaleY(1);
+    }
+
+    &__selected {
+        padding: 2px 3px;
+        font-size: 10px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+
+        span {
+            @include w-h(16px);
+            margin-right: 3px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+    }
+
+    &__menu {
+        z-index: 200;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 100%; // wdith of lang-box
+        background-color: $primary;
+        transition: .4s;
+        transform: scaleY(0);
+        transform-origin: top;
+        max-height: 78px; // height of all shown elements together ( n * x  a.height)
+        overflow-y: auto;
+
+        &::-webkit-scrollbar {
+            width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+            background-color:rgb(153, 153, 153); 
+            box-shadow: none;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #fff; 
+            border-radius: 0px;
+        }
+
+        a {
+            display: block;
+            min-width: max-content;
+            width: 100%;
+
+            padding: 5px 3px;
+            font-size: 10px;
+            display: flex;
+            align-items: center;
+            text-transform: uppercase;
+    
+            span {
+                @include w-h(16px);
+                margin-right: 3px;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            &:hover {
+                background-color: rgba(247, 247, 247, 0.664);
+            }
+        }
+    }
+}

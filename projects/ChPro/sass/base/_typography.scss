@@ -1,0 +1,34 @@
+/* ____  typo   ____ */
+
+@font-face {
+    font-family: 'futura-book';
+    src: url('../fonts/FuturaPTBook.otf');
+}
+@font-face {
+    font-family: 'futura-demi';
+    src: url('../fonts/FuturaPTDemi.otf');
+}
+@font-face {
+    font-family: 'futura-medium';
+    src: url('../fonts/FuturaPTMedium.otf');
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #111;
+    font-size: 14px;
+}
+
+h3,h4,h5,h6 {
+    font-weight: normal;
+}
+
+h1,h2,h3,h4 {
+    text-transform: capitalize;
+}
+
+p {
+    line-height: 1.5;
+}

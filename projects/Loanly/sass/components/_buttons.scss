@@ -1,0 +1,47 @@
+
+// download btn
+
+.download-link {
+    width: 122px;
+    line-height: 36px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    background-color: $primary;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .8s;
+    font-size: 12px;
+
+    span {
+        margin-left: 10px;
+        height: 24px;
+        min-width: 24px;
+        background-color: #fff;
+        border-radius: 50%;
+        transition: 1s;
+        svg {
+            fill: $primary;
+            height: 11px;
+            transition: 1s;
+        }
+    }
+
+    &:hover {
+        background-color: #fff;
+        border: 1px solid $primary;
+        color: $primary;
+
+        span {
+            background-color: $primary;
+            svg {
+                fill: #fff;
+            }
+        }
+    }
+
+}
+
+
+//

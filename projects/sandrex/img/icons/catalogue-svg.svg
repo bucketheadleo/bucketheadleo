@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="53" height="21" viewBox="0 0 53 21">
+  <defs>
+    <clipPath id="clip-path">
+      <rect x="17" y="2" width="53" height="21" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Scroll_Group_1" data-name="Scroll Group 1" transform="translate(-17 -2)" clip-path="url(#clip-path)" style="isolation: isolate">
+    <g id="Group_2623" data-name="Group 2623" transform="translate(-15188 274)">
+      <g id="Rectangle_1581" data-name="Rectangle 1581" transform="translate(15220 -271)" fill="none" stroke="#000" stroke-width="2">
+        <rect width="25" height="20" stroke="none"/>
+        <rect x="1" y="1" width="23" height="18" fill="none"/>
+      </g>
+      <g id="Rectangle_1583" data-name="Rectangle 1583" transform="translate(15247 -271)" fill="none" stroke="#000" stroke-width="2">
+        <rect width="25" height="20" stroke="none"/>
+        <rect x="1" y="1" width="23" height="18" fill="none"/>
+      </g>
+      <g id="Rectangle_1582" data-name="Rectangle 1582" transform="translate(15193 -271)" fill="none" stroke="#000" stroke-width="2">
+        <rect width="25" height="20" stroke="none"/>
+        <rect x="1" y="1" width="23" height="18" fill="none"/>
+      </g>
+      <rect id="Rectangle_1584" data-name="Rectangle 1584" width="18" height="27" transform="translate(15188 -274)" fill="#fbfbfb"/>
+      <rect id="Rectangle_1585" data-name="Rectangle 1585" width="18" height="27" transform="translate(15256 -274)" fill="#fbfbfb"/>
+    </g>
+  </g>
+</svg>

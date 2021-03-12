@@ -1,0 +1,38 @@
+
+// -- cover div
+@mixin abs-whole {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+// bseudo after at bot
+@mixin after-bottom {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+// flex between
+@mixin  flex-between {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+// gradient
+@mixin gradient-blue {
+    background: linear-gradient( to bottom, $darkblue , $lightblue);
+}
+
+// font family
+@mixin font-meri {
+    font-family: 'Merriweather', serif;
+}
+
+// media query
+@mixin mediaMax($width) {
+    @media only screen and ( max-width: $width) { @content }
+}

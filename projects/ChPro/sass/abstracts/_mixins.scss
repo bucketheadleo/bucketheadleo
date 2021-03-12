@@ -1,0 +1,53 @@
+
+// Flex-boxes
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-between-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+// width & height ; if height is not passed by default it ll be width (pass one argument for both)
+@mixin w-h($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// font
+@mixin roboto {
+    font-family: "Roboto",sans-serif;
+}
+
+// -- cover div
+@mixin abs-whole {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+// pseudo after at bot
+@mixin after-bottom {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+// Box shadow 
+@mixin shadow-dark {
+    box-shadow: 0 0 17px rgba(#000 , .015);
+}
+
+
+
+
+// Media Query
+@mixin mediaMax($width) {
+    @media only screen and ( max-width: $width) { @content }
+}

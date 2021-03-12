@@ -1,0 +1,802 @@
+/* ______________  index.html   ______________ */
+
+// section 1 - hero
+.hero {
+    width: 100%;
+    position: relative;
+
+    &__slider {
+        width: 100%;
+        position: relative;
+
+        &-item {
+            outline: none;
+            cursor: pointer;
+            height: 700px !important;
+            position: relative;
+            @include mediaMax( 700px) {
+                height: 570px !important;
+            }
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#fff, .68);
+            }
+
+            &--content {
+                position: absolute;
+                top: 40%;
+
+                h1,h2 {
+                    color: $clr-black;
+                    font-size: 52px;
+                    font-weight: 500;
+                    line-height: 1;
+                    margin-bottom: 35px;
+                }
+                a {
+                    display: inline-block;
+                    padding: 0 50px;
+                    line-height: 64px;
+                    border-radius: 8px;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                @include mediaMax( 1400px) {
+                    h1,h2 {
+                        font-size: 43px;
+                    }
+                    a {
+                        padding: 0 30px;
+                        line-height: 50px;
+                    }
+                }
+                @include mediaMax( 700px) {
+                    h1,h2 {
+                        font-size: 28px;
+                    }
+                    a {
+                        padding: 0 20px;
+                        line-height: 44px;
+                    }
+                }
+            }
+        }
+    }
+
+    // hero slider nav
+    .slider-nav-wrapper {
+        position: absolute;
+        width: 100%;
+        bottom: 90px;
+        pointer-events: none;
+
+        .container {
+            display: flex;
+            align-items: center;
+        }
+        p {
+            min-width: max-content;
+            margin-right: 15px;
+            font-size: 12px;
+            color: $text-gray;
+        }
+
+        .slider-nav {
+            max-width: 200px
+        }
+        .slider-thumb {
+            @include w-h(34px);
+            border-radius: 50%;
+            background-color: #fff;
+            overflow: hidden;
+            margin-right: 7px;
+            outline: none;
+            cursor: pointer;
+            pointer-events: painted;
+        }
+        .slider-thumb.active {
+            border: 1px solid $primary;
+        }
+    }
+    
+}
+
+// section 2 -  welcome
+.welcome  {
+    padding: 45px 0;
+    color: $clr-black;
+
+    @include mediaMax(900px) {
+        padding: 35px 0;
+    }
+    @include mediaMax(650px) {
+        padding: 30px 0;
+    }
+
+    svg {
+        fill: $primary;
+        max-width: 38px;
+        height: auto;
+        display: block;
+        @include mediaMax(650px) {
+            max-width: 32px;
+        }
+    }
+    &__top {
+        text-align: center;
+        span {
+            background-color: rgba($primary, .35);
+            @include w-h(50px);
+            border-radius: 50%;
+            margin: 0 auto 10px;
+        }
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            @include mediaMax(650px)  {
+                font-size: 15px;
+            }
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #DFE6E9;
+            max-width:360px;
+
+            
+            margin: 22px auto 10px;
+        }
+    }
+    &__cards {
+        margin-top: 35px;
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            max-width: 226px;
+            padding: 5px 10px;
+            span {
+                @include w-h(90px);
+                border-radius: 50%;
+                margin: 0 auto 10px;
+                background-color: #F6F6F6;
+            }
+            p {
+                font-size: 16px;
+                text-align: center;
+            }
+        }
+
+        @include mediaMax(850px) {
+            flex-wrap: wrap;
+
+            .card {
+                width: 33.3%;
+                margin: 20px auto;
+            }
+        }
+        @include mediaMax(650px) {
+            .card {
+                width: 50%;
+                margin: 5px 0;
+                span {
+                    @include w-h(65px);
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+        } 
+    }
+}
+
+// section 3 - platforms
+.platforms {
+    padding: 35px 0;
+    background-color: #F5FBFE;
+
+    &.no-bg {
+        background-color: transparent;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &__left {
+        width: 40%;
+        @include mediaMax(1250px) {
+            width: 45%;
+        }
+        @include mediaMax(700px) {
+            width: 100%;
+        }
+    }
+    &__texts {
+        color: #2D3436;
+        display: none;
+        &.shown {
+            display: block;
+            animation: move-from-left 1s ;
+        }
+
+        h3 {
+            font-size: 48px;
+            font-family: 'futura-medium' , 'Poppins',sans-serif;
+        }
+        h1 {
+            font-size: 72px;
+            font-family: 'futura-demi' , 'Poppins',sans-serif;
+        }
+        h4{
+            font-size: 30px;
+
+            font-family: 'futura-book' , 'Poppins',sans-serif;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        @include mediaMax(1250px) {
+            h3 {
+                font-size: 40px;
+            }
+            h1 {
+                font-size: 62px;
+                line-height: 1.1;
+            }
+            h4 {
+                font-size: 25px;
+            }
+            p {
+                font-size: 15px;
+            }
+        }
+        @include mediaMax(700px) {
+            h3 {
+                font-size: 32px;
+            }
+            h1 {
+                font-size: 46px;
+                line-height: 1.1;
+            }
+            h4 {
+                font-size: 22px;
+            }
+
+        }
+    }
+
+    &__tabs {
+        margin-top: 20px;
+        display: flex;
+        &-btn {
+            @include w-h(68px);
+            border-radius: 9px;
+            background-color: rgba(#C8E8C1, .38);
+            transition: .4s;
+            margin-right: 9px;
+            @include mediaMax(700px) {
+                @include w-h(54px);
+            }
+            svg {
+                fill: #B7D8BD;
+                max-width: 35px;
+            }
+            &:hover {
+                background-color: rgba(#C8E8C1, .9);
+            }
+            &.active {
+                background-color: $primary;
+                svg {
+                    fill: #fff;
+                }
+            }
+
+        }
+    }
+
+    &__pictures {
+        width: 53%;
+        @include mediaMax(700px) {
+            margin-top: 20px;
+            width: 100%;
+        }
+        .platforms-ui {
+            align-items: center;
+            justify-content: flex-end;
+            flex-direction: column;
+            display: none;
+            &.shown {
+                animation: move-from-right 1s ;
+                display: flex;
+            }
+            img {
+                max-height: 430px;
+                max-width: 100%;
+            }
+            a {
+                margin: 5px auto 0;
+                display: inline-block;
+                padding: 0 15px;
+                border-radius: 4px;
+                line-height: 36px;
+                min-width: 160px;
+                text-align: center;
+            }
+            @include mediaMax(700px) {
+                img {
+                    max-height: 330px;
+                }
+            }
+        }
+        
+    }
+}
+
+
+// section 4 -  Account Types
+.accounts {
+    color: #1A1A1A;
+    padding: 35px 0;
+    text-align: center;
+    background-image: linear-gradient(rgba(#fff, .75),rgba(#fff, .75)),
+        url('../img/accounts-bg.png');
+    background-position: center;
+    background-size: cover;
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
+    &__paragraph {
+        font-size: 16px;
+        max-width: 800px;
+        margin: 0 auto;
+        @include mediaMax(680px) {
+            font-size: 15px;
+        }
+    }
+
+    &__types {
+        margin-top: 25px;
+        position: relative;
+        min-height: 250px;
+
+       &-description {
+           position: absolute;
+           left: 0;
+           bottom: 74px;
+           width: 100%;
+           @include mediaMax(950px) {
+            display: none;
+           }
+
+           ul {
+               width: 100%;
+               text-align: left;
+               li {
+                   display: flex;
+                   align-items: center;
+                   min-height: 45px;
+                   border-bottom: 1px solid #DFE6E9;
+                   font-size: 12px;
+               }
+           }
+       }
+
+       &-cards {
+            width: calc( 100% - 125px);
+            margin-left: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            row-gap: 20px;
+            column-gap: 40px;
+            @include mediaMax(1200px) {
+                column-gap: 15px;
+            }
+            @include mediaMax(950px) {
+                width: 100%;
+            }
+            @include mediaMax(850px)  {
+                grid-template-columns: 1fr 1fr;
+            }
+            @include mediaMax(680px)  {
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+
+    &__open-acc {
+        margin: 35px auto 0;
+        display: inline-block;
+        max-width: 240px;
+        line-height: 50px;
+        border-radius: 9px;
+        font-size: 14px;
+        font-weight: 400;
+        padding: 0 22px;
+    }
+
+}
+
+// section 5 - funds
+.funds {
+    position: relative;
+    background-color: #1D8450;
+    color: #fff;
+
+    .decoration {
+        position: absolute;
+        bottom: 0;
+        right: 160px;
+        height: 100%;
+        width: auto;
+        @include mediaMax(1600px) {
+            right: 0px;
+            opacity: .7;
+        }
+        @include mediaMax(1200px)  {
+            opacity: .3;
+            height: 80%;
+        }
+    }
+    .overlay {
+        position: relative;
+        z-index: 10;
+        background-color: rgba(#C8E8C2,  .31);
+        padding: 35px 0 50px;
+
+        @include mediaMax(650px) {
+            padding: 20px 0 40px;
+        }
+    }
+    
+    &__main {
+        max-width: 740px;
+
+        &-title {
+            line-height: 1;
+            font-family: 'futura-demi' , 'Poppins',sans-serif;
+            font-size: 72px;
+            margin-bottom: 10px;
+
+            span {
+                font-family: 'futura-medium' , 'Poppins',sans-serif;
+                font-size: 48px;
+                line-height: 1.2;
+            }
+            @include mediaMax(1500px) {
+                font-size: 55px;
+                span {
+                    font-size: 35px;
+                }
+            }
+            @include mediaMax(650px) {
+                font-size: 36px;
+                span {
+                    font-size: 26px;
+                }
+            }
+        }
+
+        &-p {
+            margin-bottom: 25px;
+            color: rgba(#fff, .63);
+            font-size: 16px;
+            @include mediaMax(650px) {
+                font-size: 15px;
+                margin-bottom: 20px;
+            }
+        }
+
+        &-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            row-gap: 28px;
+            column-gap: 30px;
+            @include mediaMax(650px) {
+                grid-template-columns: 1fr;
+                row-gap: 14px;
+            }
+
+            .funds-card {
+                display: flex;
+                align-items: center;
+
+                span {
+                    min-width: 62px;
+                    height: 62px;
+                    border-radius: 7px;
+                    background-color: rgba(#fff, .3);
+                    margin-right: 25px;
+                }
+                p {
+                    font-size: 16px;
+                }
+                @include mediaMax(650px) {
+                    span {
+                        min-width: 42px;
+                        height: 42px;
+                        img {
+                            height: 60%;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        &-link {
+            display: inline-block;
+            margin-top: 30px;
+            line-height: 68px;
+            border-radius: 12px;
+            color: $primary;
+            padding: 0 45px;
+            background-color: #fff;
+            font-size: 16px;
+            box-shadow: 0 2px 0 1px  rgba(#fff, .47);
+            transition: .5s;
+            &:hover {
+                box-shadow: 0 2px 6px 1px  rgba(rgb(39, 46, 35), .2);
+            }
+            @include mediaMax(1000px) {
+                line-height: 60px;
+            }
+            @include mediaMax(650px) {
+                margin-top: 20px;
+                line-height: 40px;
+                padding: 0 22px;
+            }
+        }
+
+    }
+
+    
+}
+
+// section  6 -  services
+.services {
+    padding: 30px 0 30px;
+    color: #2D3436;
+    position: relative;
+    @include mediaMax(1000px) {
+        padding: 20px 0 15px;
+    }
+
+    &__title {
+        font-family: 'futura-medium' , 'Poppins',sans-serif;
+        font-size: 48px;
+        margin-bottom: 10px;
+        @include mediaMax(1200px) {
+            font-size: 40px;
+        }
+        @include mediaMax(700px){
+            font-size: 32px;
+            margin-bottom: 3px;
+        }
+    }
+
+    &__p {
+        font-size: 16px;
+        margin: 0 0 25px;
+        @include mediaMax(700px){
+            font-size: 15px;
+            margin: 0 0 15px;
+        }
+    }
+
+
+    &__slider-nav {
+        margin-bottom: 22px;
+
+
+        @media (min-width: 700px)  {
+            .slick-track {
+                transform: none !important;
+    
+            }
+        }
+
+        .slider-thumb-s {
+            margin-right: 30px;
+            outline: none;
+            cursor: pointer;
+            pointer-events: painted;
+            color: rgba( #2D3436, .6);
+            font-size: 16px;
+            padding: 5px 0;
+            @include mediaMax(700px) {
+                font-size: 15px;
+                margin-right: 20px;
+            }
+        }
+        .slider-thumb-s.active {
+            border-bottom: 1px solid $primary;
+            color: #2D3436;
+        }
+    }
+
+    &__slider {
+        cursor: pointer;
+        width: 100%;
+        position: relative;
+    }
+}
+
+// section  -   awards
+.awards {
+    background-color: #F6F6F6;
+    color: #1A1A1A;
+    .overlay {
+        padding: 45px 0 45px;
+        background-image: url('../img/awards-bg.png');
+        background-position: center;
+        background-size: cover;
+
+        @include mediaMax(650px) {
+            padding: 35px 0;
+        }
+    }
+
+    svg {
+        fill: $primary;
+    }
+
+    &__top {
+        text-align: center;
+        
+        span {
+            margin: 0 auto;
+            border-radius: 50%;
+            @include w-h(50px);
+            background-color: #E4F4E7;
+        }
+
+        h2 {
+            font-size: 16px;
+            font-weight: 500;
+            margin: 15px 0;
+        }
+        p {
+            font-size: 16px;
+            max-width: 800px;
+            margin: 0 auto;
+            @include mediaMax(650px) {
+                font-size: 15px;
+            }
+        }
+    }
+
+    hr {
+        border: none;
+        border-top: 1px solid #DFE6E9;
+        max-width: 360px;
+        margin: 15px auto 45px;
+
+        @include mediaMax(650px) {
+            margin: 15px auto 35px;
+        }
+    }
+
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+
+
+        .card {
+            span {
+                border-radius: 50%;
+                @include w-h(90px);
+                background-color: #fff;
+                margin: 0 auto 15px;
+
+                svg {
+                    height: 28px;
+                    width: auto;
+                }
+            }
+            max-width: 220px;
+            padding: 0 10px;
+            text-align: center;
+        }
+
+        @include mediaMax(900px) {
+            flex-wrap: wrap;
+
+            .card {
+                width: 33%;
+                margin: 10px auto ;
+                @include mediaMax(650px) {
+                    width: 50%;
+                    margin: 5px 0;
+                    span {
+                        @include w-h(65px);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// section   - awards-info
+.awards-info {
+    padding: 30px 0;
+    color: #1A1A1A;
+
+    &__wrapper {
+        border: 1px solid #DFE6E9;
+        padding: 36px 50px;
+        border-radius: 14px;
+
+        @include mediaMax(1000px)  {
+            padding: 20px 30px;
+        }
+
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &-item {
+            width: 31%;
+            max-width: 300px;
+            @include mediaMax(720px) {
+                width: 100%;
+                max-width: unset;
+                text-align: center;
+                &:not(:last-of-type) {
+                    margin-bottom: 15px;
+                }
+            }
+
+            .flex-center {
+                background-color: #E4F4E7;
+                border-radius: 50%;
+                @include w-h(82px);
+                
+                svg,img {
+                    height: 33px;
+                    width: auto;
+                }
+                @include mediaMax(720px) {
+                    @include w-h(62px);
+                    margin: 0 auto;
+                    svg,img {
+                        height: 30px;
+                    }
+                }
+            }
+
+            h2 {
+                font-size: 18px;
+                font-weight: 500;
+                margin: 10px 0;
+            }
+
+            p {
+                font-size: 12px;
+                a,span {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
+
+// section   -
+
