@@ -119,6 +119,9 @@ searchUnderline.onclick = function(){
     notFound.style.opacity = "1";
 }
 
+
+
+
 // ACCOUNT hover  show / hide
 const accountLink = document.getElementById('account-link');
 const accountForm = document.querySelector('.account');

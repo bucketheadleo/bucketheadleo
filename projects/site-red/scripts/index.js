@@ -22,6 +22,7 @@ window.addEventListener('scroll', ()=> {
 });
 
 
+
 // SECTION 1 --  hero --  SLIDER
 const slides = document.querySelectorAll('.figure-slide');
 const buttons = document.querySelectorAll('.slide-index');
