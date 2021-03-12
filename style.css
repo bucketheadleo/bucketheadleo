@@ -336,11 +336,11 @@ body {
 
 }
 .resume  .content {
-    padding: 60px 0px;
+    padding: 10px 0px 40px;
     
 }
 .resume  .content .download {
-    margin: 20px 0 60px;
+    margin: 10px 0 40px;
 }
 .resume  .content .download:hover a {
     color: orchid;
@@ -369,8 +369,8 @@ body {
 }
 
 .contact .content {
-    margin: 50px 0 0;
-    padding: 50px;
+    margin: 30px 0 0;
+    padding: 30px;
 }
 .contact .content p {
     color: rgb(99, 97, 96);
@@ -545,7 +545,21 @@ body {
     .header .content {
         padding: 30px 20px;
     }
-    
+
+    /* other pages */
+    .resume {
+        padding: 0 15px;
+    }
+    .resume .heading {
+        font-size: 26px;
+    }
+    .resume .content .download {
+        margin: 0px 0 30px;
+    }
+    .resume .content .download a {
+        font-size: 16px;   
+    }
+
     
 
 }
