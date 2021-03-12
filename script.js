@@ -21,3 +21,8 @@ function toggleMenu() {
 };
 
 
+window.addEventListener('click', function(e) {
+    if(e.target === menu) {
+        menu.classList.remove('show');
+    }
+})
