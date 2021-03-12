@@ -251,7 +251,11 @@ body {
 }
 .page-content .projects-wrapper .col .portfolio-item-link {
     width: 100%;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
+    transition: .9s;
+}
+.page-content .projects-wrapper .col .portfolio-item-link:hover {
+    box-shadow: 0 2px 10px rgba(14, 14, 14, 0.38);
 }
 .page-content .projects-wrapper .col .portfolio-item-link:hover  .portfolio-item .item-description {
     opacity: 1;
