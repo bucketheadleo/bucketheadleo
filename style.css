@@ -433,6 +433,9 @@ body {
         background: rgba(202, 160, 214, 0.95);
         overflow: auto;
         padding: 20px 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     }
     .header .content .navigation .menu-list {
