@@ -14,7 +14,6 @@ const menu = document.querySelector('.navigation');
 
 function toggleMenu() {
     menu.classList.toggle('show');
-    menu.style.transition = "0.5s ease-in-out"
     menuBtn.classList.toggle('switch');
     
     document.body.classList.toggle('prevent-body-scroll');
@@ -24,5 +23,8 @@ function toggleMenu() {
 window.addEventListener('click', function(e) {
     if(e.target === menu) {
         menu.classList.remove('show');
+        menuBtn.classList.remove('switch');
+        document.body.classList.remove('prevent-body-scroll');
+       
     }
 })
